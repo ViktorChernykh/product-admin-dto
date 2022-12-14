@@ -23,16 +23,16 @@ public struct CategoryListDto: Codable {
 
     // MARK: - Init
     public init(
-        ids: [UUID]? = nil,
-        externalIds: [String]? = nil,
-        isVisible: Bool? = nil,
-        lang: String? = nil,
-        name: String? = nil,
-        page: Int? = nil,
-        parentIds: [UUID]? = nil,
-        per: Int? = nil,
-        createdRange: DateRangeDto? = nil,
-        updatedRange: DateRangeDto? = nil
+        ids: [UUID]?,
+        externalIds: [String]?,
+        isVisible: Bool?,
+        lang: String?,
+        name: String?,
+        page: Int?,
+        parentIds: [UUID]?,
+        per: Int?,
+        createdRange: DateRangeDto?,
+        updatedRange: DateRangeDto?
     ) {
         self.ids = ids
         self.externalIds = externalIds
@@ -59,13 +59,13 @@ public struct CategoryCreateDto: Codable {
 
     // MARK: - Init
     public init(
-        externalId: String? = nil,
-        image: String? = nil,
+        externalId: String?,
+        image: String?,
         isVisible: Bool,
         name: String,
-        order: Int? = nil,
-        specification: String? = nil,
-        parentId: UUID? = nil
+        order: Int?,
+        specification: String?,
+        parentId: UUID?
     ) {
         self.externalId = externalId
         self.image = image
@@ -91,13 +91,13 @@ public struct CategoryUpdateDto: Codable {
     // MARK: - Init
     public init(
         id: UUID,
-        externalId: String? = nil,
-        image: String? = nil,
+        externalId: String?,
+        image: String?,
         isVisible: Bool,
         name: String,
-        order: Int? = nil,
-        specification: String? = nil,
-        parentId: UUID? = nil
+        order: Int?,
+        specification: String?,
+        parentId: UUID?
     ) {
         self.id = id
         self.externalId = externalId

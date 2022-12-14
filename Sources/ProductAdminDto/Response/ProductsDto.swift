@@ -31,21 +31,21 @@ public struct ProductsDto: Codable {
     public init(
         id: UUID,
         currencyId: String,
-        images: [String]? = nil,
+        images: [String]?,
         isAvailableOnOrder: Bool,
         isDesire: Bool,
         isPayWhatYouWant: Bool,
         likeCount: Int,
         name: String,
-        oldPrice: Double? = nil,
+        oldPrice: Double?,
         inStock: Bool,
-        price: Double? = nil,
-        siteColor: String? = nil,
-        sku: String? = nil,
-        subtitle: String? = nil,
+        price: Double?,
+        siteColor: String?,
+        sku: String?,
+        subtitle: String?,
         unit: String,
-        vendorId: UUID? = nil,
-        vendorName: String? = nil
+        vendorId: UUID?,
+        vendorName: String?
     ) {
         self.id = id
         self.currencyId = currencyId

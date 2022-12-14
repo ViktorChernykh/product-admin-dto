@@ -29,7 +29,7 @@ public struct OptionValueTranslateDto: Codable {
         lang: String,
         value: String,
         createdAt: Date,
-        updatedAt: Date? = nil
+        updatedAt: Date?
     ) {
         self.id = id
         self.lang = lang

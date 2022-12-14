@@ -21,14 +21,14 @@ public struct OptionValueListDto: Codable {
 
     // MARK: - Init
     public init(
-        ids: [UUID]? = nil,
-        externalIds: [String]? = nil,
-        optionIds: [UUID]? = nil,
-        page: Int? = nil,
-        per: Int? = nil,
-        value: String? = nil,
-        createdRange: DateRangeDto? = nil,
-        updatedRange: DateRangeDto? = nil
+        ids: [UUID]?,
+        externalIds: [String]?,
+        optionIds: [UUID]?,
+        page: Int?,
+        per: Int?,
+        value: String?,
+        createdRange: DateRangeDto?,
+        updatedRange: DateRangeDto?
     ) {
         self.ids = ids
         self.externalIds = externalIds
@@ -52,11 +52,11 @@ public struct OptionValueCreateDto: Codable {
 
     // MARK: - Init
     public init(
-        externalId: String? = nil,
-        image: String? = nil,
+        externalId: String?,
+        image: String?,
         optionId: UUID,
-        priceModifier: Double? = nil,
-        priceModifierType: PriceModifierType? = nil,
+        priceModifier: Double?,
+        priceModifierType: PriceModifierType?,
         value: String
     ) {
         self.externalId = externalId
@@ -81,11 +81,11 @@ public struct OptionValueUpdateDto: Codable {
     // MARK: - Init
     public init(
         id: UUID,
-        externalId: String? = nil,
-        image: String? = nil,
+        externalId: String?,
+        image: String?,
         optionId: UUID,
-        priceModifier: Double? = nil,
-        priceModifierType: PriceModifierType? = nil,
+        priceModifier: Double?,
+        priceModifierType: PriceModifierType?,
         value: String
     ) {
         self.id = id

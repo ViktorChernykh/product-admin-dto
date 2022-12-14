@@ -21,14 +21,14 @@ public struct AttributeGroupListDto: Codable {
 
     // MARK: - Init
     public init(
-        ids: [UUID]? = nil,
-        externalIds: [String]? = nil,
-        langs: [String]? = nil,
-        name: String? = nil,
-        page: Int? = nil,
-        per: Int? = nil,
-        createdRange: DateRangeDto? = nil,
-        updatedRange: DateRangeDto? = nil
+        ids: [UUID]?,
+        externalIds: [String]?,
+        langs: [String]?,
+        name: String?,
+        page: Int?,
+        per: Int?,
+        createdRange: DateRangeDto?,
+        updatedRange: DateRangeDto?
     ) {
         self.ids = ids
         self.externalIds = externalIds
@@ -48,7 +48,7 @@ public struct AttributeGroupCreateDto: Codable {
 
     // MARK: - Init
     public init(
-        externalId: String? = nil,
+        externalId: String?,
         name: String
     ) {
         self.externalId = externalId
@@ -65,7 +65,7 @@ public struct AttributeGroupUpdateDto: Codable {
     // MARK: - Init
     public init(
         id: UUID,
-        externalId: String? = nil,
+        externalId: String?,
         name: String
     ) {
         self.id = id

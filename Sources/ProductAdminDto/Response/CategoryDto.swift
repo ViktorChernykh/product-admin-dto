@@ -23,15 +23,15 @@ public struct CategoryDto: Codable {
     // MARK: - Init
     public init(
         id: UUID,
-        externalId: String? = nil,
-        image: String? = nil,
+        externalId: String?,
+        image: String?,
         isVisible: Bool,
         name: String,
         order: Int,
-        parentId: UUID? = nil,
-        specification: String? = nil,
+        parentId: UUID?,
+        specification: String?,
         createdAt: Date,
-        updatedAt: Date? = nil
+        updatedAt: Date?
     ) {
         self.id = id
         self.externalId = externalId

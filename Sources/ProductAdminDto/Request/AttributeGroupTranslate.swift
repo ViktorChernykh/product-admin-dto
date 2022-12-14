@@ -21,14 +21,14 @@ public struct AttributeGroupTranslateListDto: Codable {
 
     // MARK: - Init
     public init(
-        ids: [UUID]? = nil,
-        attributeGroupIds: [UUID]? = nil,
-        langs: [String]? = nil,
-        page: Int? = nil,
-        per: Int? = nil,
-        translatedName: String? = nil,
-        createdRange: DateRangeDto? = nil,
-        updatedRange: DateRangeDto? = nil
+        ids: [UUID]?,
+        attributeGroupIds: [UUID]?,
+        langs: [String]?,
+        page: Int?,
+        per: Int?,
+        translatedName: String?,
+        createdRange: DateRangeDto?,
+        updatedRange: DateRangeDto?
     ) {
         self.ids = ids
         self.attributeGroupIds = attributeGroupIds

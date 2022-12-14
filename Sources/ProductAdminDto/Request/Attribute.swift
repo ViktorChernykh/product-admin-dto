@@ -25,18 +25,18 @@ public struct AttributeListDto: Codable {
 
     // MARK: - Init
     public init(
-        ids: [UUID]? = nil,
+        ids: [UUID]?,
         categoryId: UUID,
-        externalIds: [String]? = nil,
-        isFilter: Bool? = nil,
-        lang: String? = nil,
-        name: String? = nil,
-        page: Int? = nil,
-        per: Int? = nil,
-        type: AttributeType? = nil,
-        unit: String? = nil,
-        createdRange: DateRangeDto? = nil,
-        updatedRange: DateRangeDto? = nil
+        externalIds: [String]?,
+        isFilter: Bool?,
+        lang: String?,
+        name: String?,
+        page: Int?,
+        per: Int?,
+        type: AttributeType?,
+        unit: String?,
+        createdRange: DateRangeDto?,
+        updatedRange: DateRangeDto?
     ) {
         self.ids = ids
         self.categoryId = categoryId
@@ -65,13 +65,13 @@ public struct AttributeCreateDto: Codable {
 
     // MARK: - Init
     public init(
-        externalId: String? = nil,
+        externalId: String?,
         isNumber: Bool,
         isFilter: Bool,
         name: String,
-        order: Int? = nil,
+        order: Int?,
         type: AttributeType,
-        unit: String? = nil
+        unit: String?
     ) {
         self.externalId = externalId
         self.isNumber = isNumber
@@ -97,13 +97,13 @@ public struct AttributeUpdateDto: Codable {
     // MARK: - Init
     public init(
         id: UUID,
-        externalId: String? = nil,
+        externalId: String?,
         isNumber: Bool,
         isFilter: Bool,
         name: String,
-        order: Int? = nil,
+        order: Int?,
         type: AttributeType,
-        unit: String? = nil
+        unit: String?
     ) {
         self.id = id
         self.externalId = externalId

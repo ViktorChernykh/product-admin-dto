@@ -34,11 +34,11 @@ public struct ProductTranslateDto: Codable {
         id: UUID,
         lang: String,
         name: String,
-        specification: String? = nil,
-        subtitle: String? = nil,
+        specification: String?,
+        subtitle: String?,
         unit: String,
         createdAt: Date,
-        updatedAt: Date? = nil
+        updatedAt: Date?
     ) {
         self.id = id
         self.lang = lang

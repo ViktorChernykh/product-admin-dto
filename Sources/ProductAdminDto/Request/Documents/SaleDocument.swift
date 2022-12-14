@@ -35,7 +35,7 @@ public struct SaleDocumentDto: Codable {
 		author: String,
 		date: Date,
 		documentId: String,
-		externalId: String? = nil,
+		externalId: String?,
 		status: DocumentStatus,
 		currency: String,
 		rate: Double,
@@ -85,7 +85,7 @@ public struct SaleDocumentRowDto: Codable {
 	public init(
 		id: UUID? = nil,
 		productId: UUID,
-		optionValueId: UUID? = nil,
+		optionValueId: UUID?,
 		unit: String,
 		сoeff: Double,
 		quantity: Double,

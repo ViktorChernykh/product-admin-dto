@@ -19,11 +19,11 @@ public struct StockDto: Codable {
     // MARK: - Init
     public init(
         id: UUID,
-        externalId: String? = nil,
-        description: String? = nil,
+        externalId: String?,
+        description: String?,
         name: String,
         createdAt: Date,
-        updatedAt: Date? = nil
+        updatedAt: Date?
     ) {
         self.id = id
         self.externalId = externalId

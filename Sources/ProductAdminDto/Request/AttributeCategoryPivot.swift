@@ -20,13 +20,13 @@ public struct AttributeCategoryListDto: Codable {
 
     // MARK: - Init
     public init(
-        attributeId: UUID? = nil,
-        categoryId: UUID? = nil,
-        externalIds: [String]? = nil,
-        page: Int? = nil,
-        per: Int? = nil,
-        createdRange: DateRangeDto? = nil,
-        updatedRange: DateRangeDto? = nil
+        attributeId: UUID?,
+        categoryId: UUID?,
+        externalIds: [String]?,
+        page: Int?,
+        per: Int?,
+        createdRange: DateRangeDto?,
+        updatedRange: DateRangeDto?
     ) {
         self.attributeId = attributeId
         self.categoryId = categoryId
@@ -48,7 +48,7 @@ public struct AttributeCategoryCreateDto: Codable {
     public init(
         attributeId: UUID,
         categoryId: UUID,
-        externalId: String? = nil
+        externalId: String?
     ) {
         self.externalId = externalId
         self.attributeId = attributeId
@@ -68,7 +68,7 @@ public struct AttributeCategoryUpdateDto: Codable {
         id: UUID,
         attributeId: UUID,
         categoryId: UUID,
-        externalId: String? = nil
+        externalId: String?
     ) {
         self.id = id
         self.externalId = externalId
@@ -87,7 +87,7 @@ public struct AttributeCategoryDeleteDto: Codable {
     public init(
         attributeId: UUID,
         categoryId: UUID,
-        externalId: String? = nil
+        externalId: String?
     ) {
         self.attributeId = attributeId
         self.categoryId = categoryId

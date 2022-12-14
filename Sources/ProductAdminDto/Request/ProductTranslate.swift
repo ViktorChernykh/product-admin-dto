@@ -24,17 +24,17 @@ public struct ProductTranslateListDto: Codable {
 
     // MARK: - Init
     public init(
-        ids: [UUID]? = nil,
-        langs: [String]? = nil,
-        page: Int? = nil,
-        per: Int? = nil,
-        productIds: [UUID]? = nil,
-        translatedName: String? = nil,
-        translatedSpecification: String? = nil,
-        translatedSubtitle: String? = nil,
-        translatedUnit: String? = nil,
-        createdRange: DateRangeDto? = nil,
-        updatedRange: DateRangeDto? = nil
+        ids: [UUID]?,
+        langs: [String]?,
+        page: Int?,
+        per: Int?,
+        productIds: [UUID]?,
+        translatedName: String?,
+        translatedSpecification: String?,
+        translatedSubtitle: String?,
+        translatedUnit: String?,
+        createdRange: DateRangeDto?,
+        updatedRange: DateRangeDto?
     ) {
         self.ids = ids
         self.langs = langs
@@ -63,8 +63,8 @@ public struct ProductTranslateCreateDto: Codable {
     public init(
         lang: String,
         translatedName: String,
-        translatedSpecification: String? = nil,
-        translatedSubtitle: String? = nil,
+        translatedSpecification: String?,
+        translatedSubtitle: String?,
         translatedUnit: String,
         productId: UUID
     ) {
@@ -91,8 +91,8 @@ public struct ProductTranslateUpdateDto: Codable {
         id: UUID,
         lang: String,
         translatedName: String,
-        translatedSpecification: String? = nil,
-        translatedSubtitle: String? = nil,
+        translatedSpecification: String?,
+        translatedSubtitle: String?,
         translatedUnit: String
     ) {
         self.id = id
