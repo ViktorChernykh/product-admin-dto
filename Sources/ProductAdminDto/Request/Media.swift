@@ -16,8 +16,8 @@ public struct MediaListDto: Codable {
     // MARK: - Init
     public init(
         productId: UUID,
-        createdRange: DateRangeDto?,
-        updatedRange: DateRangeDto?
+        createdRange: DateRangeDto? = nil,
+        updatedRange: DateRangeDto? = nil
     ) {
         self.productId = productId
         self.createdRange = createdRange

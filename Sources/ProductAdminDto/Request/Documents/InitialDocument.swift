@@ -12,13 +12,18 @@ public struct InitialDocumentDto: Codable {
 	public let id: UUID?
 	public let author: String
 	public let date: Date
-	public let documentId: UUID
-	public let externalId: UUID?
+	public let documentId: String
+	public let externalId: String?
 	public let status: DocumentStatus
 	// currency
 	public let currency: String
 	public let rate: Double
 	public let multiplicity: Double
+
+	public let isOnSale: Bool
+	public let isOnVat: Bool
+	public let onSale: Bool
+	public let onVat: Bool
 
 	public let stockId: UUID
 	public let userId: UUID
@@ -29,12 +34,16 @@ public struct InitialDocumentDto: Codable {
 		id: UUID? = nil,
 		author: String,
 		date: Date,
-		documentId: UUID,
-		externalId: UUID?,
+		documentId: String,
+		externalId: String? = nil,
 		status: DocumentStatus,
 		currency: String,
 		rate: Double,
 		multiplicity: Double,
+		isOnSale: Bool,
+		isOnVat: Bool,
+		onSale: Bool,
+		onVat: Bool,
 		stockId: UUID,
 		userId: UUID,
 		rows: [InitialDocumentRowDto]
@@ -48,6 +57,10 @@ public struct InitialDocumentDto: Codable {
 		self.currency = currency
 		self.rate = rate
 		self.multiplicity = multiplicity
+		self.isOnSale = isOnSale
+		self.isOnVat = isOnVat
+		self.onSale = onSale
+		self.onVat = onVat
 		self.stockId = stockId
 		self.userId = userId
 		self.rows = rows
@@ -60,7 +73,7 @@ public struct InitialDocumentRowDto: Codable {
 	public let productId: UUID
 	public let optionValueId: UUID?
 	public let unit: String
-	public let сoeff: Double
+	public let coeff: Double
 	public let quantity: Double
 	public let price: Double
 	public let amount: Double
@@ -71,9 +84,9 @@ public struct InitialDocumentRowDto: Codable {
 	public init(
 		id: UUID? = nil,
 		productId: UUID,
-		optionValueId: UUID?,
+		optionValueId: UUID? = nil,
 		unit: String,
-		сoeff: Double,
+		coeff: Double,
 		quantity: Double,
 		price: Double,
 		amount: Double,
@@ -84,7 +97,7 @@ public struct InitialDocumentRowDto: Codable {
 		self.productId = productId
 		self.optionValueId = optionValueId
 		self.unit = unit
-		self.сoeff = сoeff
+		self.coeff = coeff
 		self.quantity = quantity
 		self.price = price
 		self.amount = amount

@@ -12,8 +12,8 @@ public struct PostingDocumentDto: Codable {
 	public let id: UUID?
 	public let author: String
 	public let date: Date
-	public let documentId: UUID
-	public let externalId: UUID?
+	public let documentId: String
+	public let externalId: String?
 	public let status: DocumentStatus
 	// currency
 	public let currency: String
@@ -28,8 +28,8 @@ public struct PostingDocumentDto: Codable {
 		id: UUID? = nil,
 		author: String,
 		date: Date,
-		documentId: UUID,
-		externalId: UUID?,
+		documentId: String,
+		externalId: String? = nil,
 		status: DocumentStatus,
 		currency: String,
 		rate: Double,
@@ -66,7 +66,7 @@ public struct PostingDocumentRowDto: Codable {
 	public init(
 		id: UUID? = nil,
 		productId: UUID,
-		optionValueId: UUID?,
+		optionValueId: UUID? = nil,
 		unit: String,
 		сoeff: Double,
 		quantity: Double,

@@ -30,12 +30,12 @@ public struct VendorDto: Codable {
     // MARK: - Init
     public init(
         id: UUID,
-        externalId: String?,
-        image: String?,
+        externalId: String? = nil,
+        image: String? = nil,
         name: String,
-        description: String?,
+        description: String? = nil,
         createdAt: Date,
-        updatedAt: Date?
+        updatedAt: Date? = nil
     ) {
         self.id = id
         self.externalId = externalId

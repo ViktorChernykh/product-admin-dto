@@ -20,12 +20,12 @@ public struct ProductAttributeValueDto: Codable {
     // MARK: - Init
     public init(
         id: UUID,
-        externalId: String?,
+        externalId: String? = nil,
         attributeId: UUID,
         attributeValueId: UUID,
         productId: UUID,
         createdAt: Date,
-        updatedAt: Date?
+        updatedAt: Date? = nil
     ) {
         self.id = id
         self.externalId = externalId

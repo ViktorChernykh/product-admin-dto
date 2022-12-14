@@ -30,9 +30,9 @@ public struct CategoryTranslateDto: Codable {
         id: UUID,
         lang: String,
         name: String,
-        specification: String?,
+        specification: String? = nil,
         createdAt: Date,
-        updatedAt: Date?
+        updatedAt: Date? = nil
     ) {
         self.id = id
         self.lang = lang

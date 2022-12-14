@@ -29,7 +29,7 @@ public struct AttributeValueTranslateDto: Codable {
         lang: String,
         value: String,
         createdAt: Date,
-        updatedAt: Date?
+        updatedAt: Date? = nil
     ) {
         self.id = id
         self.lang = lang

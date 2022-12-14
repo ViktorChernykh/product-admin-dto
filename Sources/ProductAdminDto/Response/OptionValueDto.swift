@@ -23,14 +23,14 @@ public struct OptionValueDto: Codable {
     // MARK: - Init
     public init(
         id: UUID,
-        externalId: String?,
-        image: String?,
+        externalId: String? = nil,
+        image: String? = nil,
         optionId: UUID,
         priceModifier: Double,
         priceModifierType: PriceModifierType,
         value: String,
         createdAt: Date,
-        updatedAt: Date?
+        updatedAt: Date? = nil
     ) {
         self.id = id
         self.externalId = externalId

@@ -24,15 +24,15 @@ public struct AttributeDto: Codable {
     // MARK: - Init
     public init(
         id: UUID,
-        externalId: String?,
+        externalId: String? = nil,
         isNumber: Bool,
         isFilter: Bool,
         name: String,
-        order: Int?,
+        order: Int? = nil,
         type: AttributeType,
-        unit: String?,
+        unit: String? = nil,
         createdAt: Date,
-        updatedAt: Date?
+        updatedAt: Date? = nil
     ) {
         self.id = id
         self.externalId = externalId

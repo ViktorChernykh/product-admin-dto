@@ -22,15 +22,15 @@ public struct CategoryTranslateListDto: Codable {
 
     // MARK: - Init
     public init(
-        ids: [UUID]?,
-        categoryIds: [UUID]?,
-        langs: [String]?,
-        page: Int?,
-        per: Int?,
-        translatedName: String?,
-        translatedSpecification: String?,
-        createdRange: DateRangeDto?,
-        updatedRange: DateRangeDto?
+        ids: [UUID]? = nil,
+        categoryIds: [UUID]? = nil,
+        langs: [String]? = nil,
+        page: Int? = nil,
+        per: Int? = nil,
+        translatedName: String? = nil,
+        translatedSpecification: String? = nil,
+        createdRange: DateRangeDto? = nil,
+        updatedRange: DateRangeDto? = nil
     ) {
         self.ids = ids
         self.categoryIds = categoryIds
@@ -55,7 +55,7 @@ public struct CategoryTranslateCreateDto: Codable {
     public init(
         lang: String,
         translatedName: String,
-        translatedSpecification: String?,
+        translatedSpecification: String? = nil,
         categoryId: UUID
     ) {
         self.lang = lang
@@ -78,7 +78,7 @@ public struct CategoryTranslateUpdateDto: Codable {
         id: UUID,
         lang: String,
         translatedName: String,
-        translatedSpecification: String?,
+        translatedSpecification: String? = nil,
         categoryId: UUID
     ) {
         self.id = id

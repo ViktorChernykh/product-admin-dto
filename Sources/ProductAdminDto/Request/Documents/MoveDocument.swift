@@ -12,8 +12,8 @@ public struct MoveDocumentDto: Codable {
 	public let id: UUID?
 	public let author: String
 	public let date: Date
-	public let documentId: UUID
-	public let externalId: UUID?
+	public let documentId: String
+	public let externalId: String?
 	public let status: DocumentStatus
 	
 	public let fromStockId: UUID
@@ -25,8 +25,8 @@ public struct MoveDocumentDto: Codable {
 		id: UUID? = nil,
 		author: String,
 		date: Date,
-		documentId: UUID,
-		externalId: UUID?,
+		documentId: String,
+		externalId: String? = nil,
 		status: DocumentStatus,
 		fromStockId: UUID,
 		toStockId: UUID,
@@ -57,7 +57,7 @@ public struct MoveDocumentRowDto: Codable {
 	public init(
 		id: UUID? = nil,
 		productId: UUID,
-		optionValueId: UUID?,
+		optionValueId: UUID? = nil,
 		unit: String,
 		сoeff: Double,
 		quantity: Double

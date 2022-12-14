@@ -21,14 +21,14 @@ public struct AttributeValueListDto: Codable {
 
     // MARK: - Init
     public init(
-        ids: [UUID]?,
-        attributeIds: [UUID]?,
-        externalIds: [String]?,
-        value: String?,
-        page: Int?,
-        per: Int?,
-        createdRange: DateRangeDto?,
-        updatedRange: DateRangeDto?
+        ids: [UUID]? = nil,
+        attributeIds: [UUID]? = nil,
+        externalIds: [String]? = nil,
+        value: String? = nil,
+        page: Int? = nil,
+        per: Int? = nil,
+        createdRange: DateRangeDto? = nil,
+        updatedRange: DateRangeDto? = nil
     ) {
         self.ids = ids
         self.attributeIds = attributeIds
@@ -49,7 +49,7 @@ public struct AttributeValueCreateDto: Codable {
 
     // MARK: - Init
     public init(
-        externalId: String?,
+        externalId: String? = nil,
         value: String,
         attributeId: UUID
     ) {
@@ -69,7 +69,7 @@ public struct AttributeValueUpdateDto: Codable {
     // MARK: - Init
     public init(
         id: UUID,
-        externalId: String?,
+        externalId: String? = nil,
         value: String,
         attributeId: UUID
     ) {

@@ -19,11 +19,11 @@ public struct AttributeCategoryDto: Codable {
     // MARK: - Init
     public init(
         id: UUID,
-        externalId: String?,
+        externalId: String? = nil,
         attributeId: UUID,
         categoryId: UUID,
         createdAt: Date,
-        updatedAt: Date?
+        updatedAt: Date? = nil
     ) {
         self.id = id
         self.externalId = externalId

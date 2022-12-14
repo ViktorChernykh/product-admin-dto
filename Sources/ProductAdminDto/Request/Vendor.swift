@@ -20,13 +20,13 @@ public struct VendorListDto: Codable {
 
     // MARK: - Init
     public init(
-        ids: [UUID]?,
-        externalIds: [String]?,
-        name: String?,
-        page: Int?,
-        per: Int?,
-        createdRange: DateRangeDto?,
-        updatedRange: DateRangeDto?
+        ids: [UUID]? = nil,
+        externalIds: [String]? = nil,
+        name: String? = nil,
+        page: Int? = nil,
+        per: Int? = nil,
+        createdRange: DateRangeDto? = nil,
+        updatedRange: DateRangeDto? = nil
     ) {
         self.ids = ids
         self.externalIds = externalIds
@@ -47,10 +47,10 @@ public struct VendorCreateDto: Codable {
 
     // MARK: - Init
     public init(
-        externalId: String?,
-        image: String?,
+        externalId: String? = nil,
+        image: String? = nil,
         name: String,
-        description: String?
+        description: String? = nil
     ) {
         self.externalId = externalId
         self.image = image
@@ -70,10 +70,10 @@ public struct VendorUpdateDto: Codable {
     // MARK: - Init
     public init(
         id: UUID,
-        externalId: String?,
-        image: String?,
+        externalId: String? = nil,
+        image: String? = nil,
         name: String,
-        description: String?
+        description: String? = nil
     ) {
         self.id = id
         self.externalId = externalId

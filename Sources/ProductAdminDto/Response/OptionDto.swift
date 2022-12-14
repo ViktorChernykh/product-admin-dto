@@ -21,12 +21,12 @@ public struct OptionDto: Codable {
     // MARK: - Init
     public init(
         id: UUID,
-        externalId: String?,
+        externalId: String? = nil,
         name: String,
         isRequired: Bool,
         optionType: OptionType,
         createdAt: Date,
-        updatedAt: Date?
+        updatedAt: Date? = nil
     ) {
         self.id = id
         self.externalId = externalId
