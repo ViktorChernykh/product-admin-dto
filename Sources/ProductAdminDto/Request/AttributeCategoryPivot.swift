@@ -77,24 +77,6 @@ public struct AttributeCategoryUpdateDto: Codable {
     }
 }
 
-public struct AttributeCategoryDeleteDto: Codable {
-    // MARK: - Stored properties
-    public let attributeId: UUID
-    public let categoryId: UUID
-    public let externalId: String?
-
-    // MARK: - Init
-    public init(
-        attributeId: UUID,
-        categoryId: UUID,
-        externalId: String?
-    ) {
-        self.attributeId = attributeId
-        self.categoryId = categoryId
-        self.externalId = externalId
-    }
-}
-
 public struct AttributeCategoryCreateListDto: Codable {
     // MARK: - Stored properties
     public let items: [AttributeCategoryCreateDto]

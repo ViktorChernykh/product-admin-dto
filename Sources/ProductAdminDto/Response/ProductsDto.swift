@@ -18,7 +18,7 @@ public struct ProductsDto: Codable {
     public let likeCount: Int
     public let name: String
     public let oldPrice: Double?
-    public let inStock: Bool
+    public let onHand: Bool
     public let price: Double?
     public let siteColor: String?
     public let sku: String?
@@ -38,7 +38,7 @@ public struct ProductsDto: Codable {
         likeCount: Int,
         name: String,
         oldPrice: Double?,
-        inStock: Bool,
+		onHand: Bool,
         price: Double?,
         siteColor: String?,
         sku: String?,
@@ -56,7 +56,7 @@ public struct ProductsDto: Codable {
         self.likeCount = likeCount
         self.name = name
         self.oldPrice = oldPrice
-        self.inStock = inStock
+        self.onHand = onHand
         self.price = price
         self.siteColor = siteColor
         self.sku = sku
