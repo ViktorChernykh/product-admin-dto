@@ -16,6 +16,15 @@ public struct StockDto: Codable {
     public let createdAt: Date
     public let updatedAt: Date?
 
+	public enum CodingKeys: String, CodingKey {
+		case id
+		case externalId
+		case description = "stockDescription"
+		case name = "stockName"
+		case createdAt
+		case updatedAt
+	}
+
     // MARK: - Init
     public init(
         id: UUID,
