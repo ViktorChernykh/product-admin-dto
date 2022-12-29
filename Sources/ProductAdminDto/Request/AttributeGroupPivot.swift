@@ -1,19 +1,19 @@
 //
-//  AttributeValue.swift
+//  AttributeGroupPivot.swift
 //  ProductAdminDto
 //
-//  Created by Victor Chernykh on 10.09.2022.
+//  Created by Victor Chernykh on 23.12.2022.
 //
 
 import Foundation
 import ProductDto
 
-public struct AttributeValueListDto: Codable {
+public struct AttributeGroupPivotListDto: Codable {
 	// MARK: - Stored properties
 	public let ids: [UUID]?
-	public let attributeIds: [UUID]?
 	public let externalIds: [String]?
-	public let value: String?
+	public let attributeId: UUID?
+	public let groupId: UUID?
 	public let page: Int?
 	public let per: Int?
 	public let createdRange: DateRangeDto?
@@ -22,18 +22,18 @@ public struct AttributeValueListDto: Codable {
 	// MARK: - Init
 	public init(
 		ids: [UUID]?,
-		attributeIds: [UUID]?,
 		externalIds: [String]?,
-		value: String?,
+		attributeId: UUID?,
+		groupId: UUID?,
 		page: Int?,
 		per: Int?,
 		createdRange: DateRangeDto?,
 		updatedRange: DateRangeDto?
 	) {
 		self.ids = ids
-		self.attributeIds = attributeIds
 		self.externalIds = externalIds
-		self.value = value
+		self.attributeId = attributeId
+		self.groupId = groupId
 		self.page = page
 		self.per = per
 		self.createdRange = createdRange
@@ -41,61 +41,61 @@ public struct AttributeValueListDto: Codable {
 	}
 }
 
-public struct AttributeValueCreateDto: Codable {
+public struct AttributeGroupPivotCreateDto: Codable {
 	// MARK: - Stored properties
 	public let externalId: String?
-	public let value: String
 	public let attributeId: UUID
+	public let groupId: UUID
 
 	// MARK: - Init
 	public init(
 		externalId: String?,
-		value: String,
-		attributeId: UUID
+		attributeId: UUID,
+		groupId: UUID
 	) {
 		self.externalId = externalId
-		self.value = value
 		self.attributeId = attributeId
+		self.groupId = groupId
 	}
 }
 
-public struct AttributeValueUpdateDto: Codable {
+public struct AttributeGroupPivotUpdateDto: Codable {
 	// MARK: - Stored properties
 	public let id: UUID
 	public let externalId: String?
-	public let value: String
 	public let attributeId: UUID
+	public let groupId: UUID
 
 	// MARK: - Init
 	public init(
 		id: UUID,
 		externalId: String?,
-		value: String,
-		attributeId: UUID
+		attributeId: UUID,
+		groupId: UUID
 	) {
 		self.id = id
 		self.externalId = externalId
-		self.value = value
 		self.attributeId = attributeId
+		self.groupId = groupId
 	}
 }
 
-public struct AttributeValueCreateListDto: Codable {
+public struct AttributeGroupPivotCreateListDto: Codable {
 	// MARK: - Stored properties
-	public let items: [AttributeValueCreateDto]
+	public let items: [AttributeGroupPivotCreateDto]
 
 	// MARK: - Init
-	public init(items: [AttributeValueCreateDto]) {
+	public init(items: [AttributeGroupPivotCreateDto]) {
 		self.items = items
 	}
 }
 
-public struct AttributeValueUpdateListDto: Codable {
+public struct AttributeGroupPivotUpdateListDto: Codable {
 	// MARK: - Stored properties
-	public let items: [AttributeValueUpdateDto]
+	public let items: [AttributeGroupPivotUpdateDto]
 
 	// MARK: - Init
-	public init(items: [AttributeValueUpdateDto]) {
+	public init(items: [AttributeGroupPivotUpdateDto]) {
 		self.items = items
 	}
 }

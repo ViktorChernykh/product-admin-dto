@@ -1,17 +1,18 @@
 //
-//  AttributeGroupDto.swift
+//  ProductCategoryPivotDto.swift
 //  ProductAdminDto
 //
-//  Created by Victor Chernykh on 28.04.2022.
+//  Created by Victor Chernykh on 23.12.2022.
 //
 
 import Foundation
 
-public struct AttributeGroupDto: Codable {
+public struct ProductCategoryPivotDto: Codable {
 	// MARK: - Stored properties
 	public let id: UUID
 	public let externalId: String?
-	public let name: String
+	public let categoryId: UUID
+	public let productId: UUID
 	public let createdAt: Date
 	public let updatedAt: Date?
 
@@ -19,13 +20,15 @@ public struct AttributeGroupDto: Codable {
 	public init(
 		id: UUID,
 		externalId: String?,
-		name: String,
+		categoryId: UUID,
+		productId: UUID,
 		createdAt: Date,
 		updatedAt: Date?
 	) {
 		self.id = id
 		self.externalId = externalId
-		self.name = name
+		self.categoryId = categoryId
+		self.productId = productId
 		self.createdAt = createdAt
 		self.updatedAt = updatedAt
 	}

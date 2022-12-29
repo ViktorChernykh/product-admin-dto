@@ -1,19 +1,18 @@
 //
-//  AttributeValue.swift
+//  OptionCategoryPivot.swift
 //  ProductAdminDto
 //
-//  Created by Victor Chernykh on 10.09.2022.
+//  Created by Victor Chernykh on 22.12.2022.
 //
 
 import Foundation
 import ProductDto
 
-public struct AttributeValueListDto: Codable {
+public struct OptionCategoryPivotListDto: Codable {
 	// MARK: - Stored properties
-	public let ids: [UUID]?
-	public let attributeIds: [UUID]?
+	public let categoryId: UUID?
 	public let externalIds: [String]?
-	public let value: String?
+	public let optionId: UUID?
 	public let page: Int?
 	public let per: Int?
 	public let createdRange: DateRangeDto?
@@ -21,19 +20,17 @@ public struct AttributeValueListDto: Codable {
 
 	// MARK: - Init
 	public init(
-		ids: [UUID]?,
-		attributeIds: [UUID]?,
+		categoryId: UUID?,
 		externalIds: [String]?,
-		value: String?,
+		optionId: UUID?,
 		page: Int?,
 		per: Int?,
 		createdRange: DateRangeDto?,
 		updatedRange: DateRangeDto?
 	) {
-		self.ids = ids
-		self.attributeIds = attributeIds
+		self.categoryId = categoryId
 		self.externalIds = externalIds
-		self.value = value
+		self.optionId = optionId
 		self.page = page
 		self.per = per
 		self.createdRange = createdRange
@@ -41,61 +38,61 @@ public struct AttributeValueListDto: Codable {
 	}
 }
 
-public struct AttributeValueCreateDto: Codable {
+public struct OptionCategoryPivotCreateDto: Codable {
 	// MARK: - Stored properties
+	public let categoryId: UUID
 	public let externalId: String?
-	public let value: String
-	public let attributeId: UUID
+	public let optionId: UUID
 
 	// MARK: - Init
 	public init(
+		categoryId: UUID,
 		externalId: String?,
-		value: String,
-		attributeId: UUID
+		optionId: UUID
 	) {
+		self.categoryId = categoryId
 		self.externalId = externalId
-		self.value = value
-		self.attributeId = attributeId
+		self.optionId = optionId
 	}
 }
 
-public struct AttributeValueUpdateDto: Codable {
+public struct OptionCategoryPivotUpdateDto: Codable {
 	// MARK: - Stored properties
 	public let id: UUID
+	public let categoryId: UUID
 	public let externalId: String?
-	public let value: String
-	public let attributeId: UUID
+	public let optionId: UUID
 
 	// MARK: - Init
 	public init(
 		id: UUID,
+		categoryId: UUID,
 		externalId: String?,
-		value: String,
-		attributeId: UUID
+		optionId: UUID
 	) {
 		self.id = id
+		self.categoryId = categoryId
 		self.externalId = externalId
-		self.value = value
-		self.attributeId = attributeId
+		self.optionId = optionId
 	}
 }
 
-public struct AttributeValueCreateListDto: Codable {
+public struct OptionCategoryPivotCreateListDto: Codable {
 	// MARK: - Stored properties
-	public let items: [AttributeValueCreateDto]
+	public let items: [OptionCategoryPivotCreateDto]
 
 	// MARK: - Init
-	public init(items: [AttributeValueCreateDto]) {
+	public init(items: [OptionCategoryPivotCreateDto]) {
 		self.items = items
 	}
 }
 
-public struct AttributeValueUpdateListDto: Codable {
+public struct OptionCategoryPivotUpdateListDto: Codable {
 	// MARK: - Stored properties
-	public let items: [AttributeValueUpdateDto]
+	public let items: [OptionCategoryPivotUpdateDto]
 
 	// MARK: - Init
-	public init(items: [AttributeValueUpdateDto]) {
+	public init(items: [OptionCategoryPivotUpdateDto]) {
 		self.items = items
 	}
 }

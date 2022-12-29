@@ -1,34 +1,43 @@
 //
-//  AttributeValueDto.swift
+//  AttributeGroupPivotDto.swift
 //  ProductAdminDto
 //
-//  Created by Victor Chernykh on 10.05.2022.
+//  Created by Victor Chernykh on 23.12.2022.
 //
 
 import Foundation
 
-public struct AttributeValueDto: Codable {
+public struct AttributeGroupPivotDto: Codable {
 	// MARK: - Stored properties
 	public let id: UUID
 	public let externalId: String?
 	public let attributeId: UUID
-	public let value: String
+	public let groupId: UUID
 	public let createdAt: Date
 	public let updatedAt: Date?
+
+	public enum CodingKeys: String, CodingKey {
+		case id
+		case externalId
+		case attributeId
+		case groupId = "attributeGroupId"
+		case createdAt
+		case updatedAt
+	}
 
 	// MARK: - Init
 	public init(
 		id: UUID,
 		externalId: String?,
 		attributeId: UUID,
-		value: String,
+		groupId: UUID,
 		createdAt: Date,
 		updatedAt: Date?
 	) {
 		self.id = id
 		self.externalId = externalId
 		self.attributeId = attributeId
-		self.value = value
+		self.groupId = groupId
 		self.createdAt = createdAt
 		self.updatedAt = updatedAt
 	}

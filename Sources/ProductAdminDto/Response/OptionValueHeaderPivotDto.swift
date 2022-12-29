@@ -1,17 +1,19 @@
 //
-//  AttributeGroupDto.swift
+//  OptionValueHeaderPivotDto.swift
 //  ProductAdminDto
 //
-//  Created by Victor Chernykh on 28.04.2022.
+//  Created by Victor Chernykh on 29.11.2022.
 //
 
 import Foundation
 
-public struct AttributeGroupDto: Codable {
+public struct OptionValueHeaderPivotDto: Codable {
 	// MARK: - Stored properties
 	public let id: UUID
 	public let externalId: String?
-	public let name: String
+	public let optionId: UUID
+	public let optionValueId: UUID
+	public let productId: UUID
 	public let createdAt: Date
 	public let updatedAt: Date?
 
@@ -19,13 +21,17 @@ public struct AttributeGroupDto: Codable {
 	public init(
 		id: UUID,
 		externalId: String?,
-		name: String,
+		optionId: UUID,
+		optionValueId: UUID,
+		productId: UUID,
 		createdAt: Date,
 		updatedAt: Date?
 	) {
 		self.id = id
 		self.externalId = externalId
-		self.name = name
+		self.optionId = optionId
+		self.optionValueId = optionValueId
+		self.productId = productId
 		self.createdAt = createdAt
 		self.updatedAt = updatedAt
 	}
