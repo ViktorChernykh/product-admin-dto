@@ -14,8 +14,6 @@ public struct DesireListDto: Codable {
 	public let per: Int?
 	public let createdFrom: Date?
 	public let createdTo: Date?
-	public let updatedFrom: Date?
-	public let updatedTo: Date?
 
 	// MARK: - Init
 	public init(
@@ -23,16 +21,12 @@ public struct DesireListDto: Codable {
 		page: Int?,
 		per: Int?,
 		createdFrom: Date?,
-		createdTo: Date?,
-		updatedFrom: Date?,
-		updatedTo: Date?
+		createdTo: Date?
 	) {
 		self.lang = lang
 		self.page = page
 		self.per = per
 		self.createdFrom = createdFrom
 		self.createdTo = createdTo
-		self.updatedFrom = updatedFrom
-		self.updatedTo = updatedTo
 	}
 }
