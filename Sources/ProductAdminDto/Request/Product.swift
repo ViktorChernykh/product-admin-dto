@@ -13,7 +13,8 @@ public struct ProductListDto: Codable {
 	public let ids: [UUID]?
 	public let attributeValueIds: [UUID]?
 	public let categoryIds: [UUID]?
-	public let discountPercentRange: DoubleRangeDto?
+	public let discountPercentMax: Double?
+	public let discountPercentMin: Double?
 	public let externalIds: [String]?
 	public let isAvailableOnOrder: Bool?
 	public let isGiftCard: Bool?
@@ -26,20 +27,24 @@ public struct ProductListDto: Codable {
 	public let isUseLikes: Bool?
 	public let isVisible: Bool?
 	public let lang: String?
-	public let likeCount: IntRangeDto?
+	public let likeCountMax: Int?
+	public let likeCountMin: Int?
 	public let name: String?
 	public let onHand: Bool?
 	public let page: Int?
 	public let per: Int?
-	public let priceRange: DoubleRangeDto?
+	public let priceMax: Double?
+	public let priceMin: Double?
 	public let quantityMax: Double?
 	public let quantityMin: Double?
 	public let skus: [String]?
 	public let sortBy: [String: String]?	 //["name": "asc"]
 	public let unit: String?
 	public let vendorIds: [UUID]?
-	public let warningLimitRange: DoubleRangeDto?
-	public let weightRange: DoubleRangeDto?
+	public let warningLimitMax: Double?
+	public let warningLimitMin: Double?
+	public let weightMax: Double?
+	public let weightMin: Double?
 	public let createdFrom: Date?
 	public let createdTo: Date?
 	public let updatedFrom: Date?
@@ -50,7 +55,8 @@ public struct ProductListDto: Codable {
 		ids: [UUID]?,
 		attributeValueIds: [UUID]?,
 		categoryIds: [UUID]?,
-		discountPercentRange: DoubleRangeDto?,
+		discountPercentMax: Double?,
+		discountPercentMin: Double?,
 		externalIds: [String]?,
 		isAvailableOnOrder: Bool?,
 		isGiftCard: Bool?,
@@ -63,20 +69,24 @@ public struct ProductListDto: Codable {
 		isUseLikes: Bool?,
 		isVisible: Bool?,
 		lang: String?,
-		likeCount: IntRangeDto?,
+		likeCountMax: Int?,
+		likeCountMin: Int?,
 		name: String?,
 		onHand: Bool?,
 		page: Int?,
 		per: Int?,
-		priceRange: DoubleRangeDto?,
+		priceMax: Double?,
+		priceMin: Double?,
 		quantityMax: Double?,
 		quantityMin: Double?,
 		skus: [String]?,
 		sortBy: [String: String]?,	 //["name": "asc"]
 		unit: String?,
 		vendorIds: [UUID]?,
-		warningLimitRange: DoubleRangeDto?,
-		weightRange: DoubleRangeDto?,
+		warningLimitMax: Double?,
+		warningLimitMin: Double?,
+		weightMax: Double?,
+		weightMin: Double?,
 		createdFrom: Date?,
 		createdTo: Date?,
 		updatedFrom: Date?,
@@ -85,7 +95,8 @@ public struct ProductListDto: Codable {
 		self.ids = ids
 		self.attributeValueIds = attributeValueIds
 		self.categoryIds = categoryIds
-		self.discountPercentRange = discountPercentRange
+		self.discountPercentMax = discountPercentMax
+		self.discountPercentMin = discountPercentMin
 		self.externalIds = externalIds
 		self.isAvailableOnOrder = isAvailableOnOrder
 		self.isGiftCard = isGiftCard
@@ -98,20 +109,24 @@ public struct ProductListDto: Codable {
 		self.isUseLikes = isUseLikes
 		self.isVisible = isVisible
 		self.lang = lang
-		self.likeCount = likeCount
+		self.likeCountMax = likeCountMax
+		self.likeCountMin = likeCountMin
 		self.name = name
 		self.onHand = onHand
 		self.page = page
 		self.per = per
-		self.priceRange = priceRange
+		self.priceMax = priceMax
+		self.priceMin = priceMin
 		self.quantityMax = quantityMax
 		self.quantityMin = quantityMin
 		self.skus = skus
 		self.sortBy = sortBy	 //["name": "asc"]
 		self.unit = unit
 		self.vendorIds = vendorIds
-		self.warningLimitRange = warningLimitRange
-		self.weightRange = weightRange
+		self.warningLimitMax = warningLimitMax
+		self.warningLimitMin = warningLimitMin
+		self.weightMax = weightMax
+		self.weightMin = weightMin
 		self.createdFrom = createdFrom
 		self.createdTo = createdTo
 		self.updatedFrom = updatedFrom
