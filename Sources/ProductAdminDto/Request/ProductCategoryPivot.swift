@@ -16,8 +16,10 @@ public struct ProductCategoryPivotListDto: Codable {
 	public let page: Int?
 	public let per: Int?
 	public let productIds: [UUID]?
-	public let createdRange: DateRangeDto?
-	public let updatedRange: DateRangeDto?
+	public let createdFrom: Date?
+	public let createdTo: Date?
+	public let updatedFrom: Date?
+	public let updatedTo: Date?
 
 	// MARK: - Init
 	public init(
@@ -27,8 +29,10 @@ public struct ProductCategoryPivotListDto: Codable {
 		page: Int?,
 		per: Int?,
 		productIds: [UUID]?,
-		createdRange: DateRangeDto?,
-		updatedRange: DateRangeDto?
+		createdFrom: Date?,
+		createdTo: Date?,
+		updatedFrom: Date?,
+		updatedTo: Date?
 	) {
 		self.ids = ids
 		self.externalIds = externalIds
@@ -36,8 +40,10 @@ public struct ProductCategoryPivotListDto: Codable {
 		self.page = page
 		self.per = per
 		self.productIds = productIds
-		self.createdRange = createdRange
-		self.updatedRange = updatedRange
+		self.createdFrom = createdFrom
+		self.createdTo = createdTo
+		self.updatedFrom = updatedFrom
+		self.updatedTo = updatedTo
 	}
 }
 

@@ -17,8 +17,10 @@ public struct OptionValueHeaderPivotListDto: Codable {
 	public let optionIds: [UUID]?
 	public let optionValueIds: [UUID]?
 	public let productIds: [UUID]?
-	public let createdRange: DateRangeDto?
-	public let updatedRange: DateRangeDto?
+	public let createdFrom: Date?
+	public let createdTo: Date?
+	public let updatedFrom: Date?
+	public let updatedTo: Date?
 
 	// MARK: - Init
 	public init(
@@ -29,8 +31,10 @@ public struct OptionValueHeaderPivotListDto: Codable {
 		optionIds: [UUID]?,
 		optionValueIds: [UUID]?,
 		productIds: [UUID]?,
-		createdRange: DateRangeDto?,
-		updatedRange: DateRangeDto?
+		createdFrom: Date?,
+		createdTo: Date?,
+		updatedFrom: Date?,
+		updatedTo: Date?
 	) {
 		self.ids = ids
 		self.externalIds = externalIds
@@ -39,8 +43,10 @@ public struct OptionValueHeaderPivotListDto: Codable {
 		self.optionIds = optionIds
 		self.optionValueIds = optionValueIds
 		self.productIds = productIds
-		self.createdRange = createdRange
-		self.updatedRange = updatedRange
+		self.createdFrom = createdFrom
+		self.createdTo = createdTo
+		self.updatedFrom = updatedFrom
+		self.updatedTo = updatedTo
 	}
 }
 

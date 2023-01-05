@@ -20,8 +20,10 @@ public struct AttributeListDto: Codable {
 	public let per: Int?
 	public let type: AttributeType?
 	public let unit: String?
-	public let createdRange: DateRangeDto?
-	public let updatedRange: DateRangeDto?
+	public let createdFrom: Date?
+	public let createdTo: Date?
+	public let updatedFrom: Date?
+	public let updatedTo: Date?
 
 	// MARK: - Init
 	public init(
@@ -35,8 +37,10 @@ public struct AttributeListDto: Codable {
 		per: Int?,
 		type: AttributeType?,
 		unit: String?,
-		createdRange: DateRangeDto?,
-		updatedRange: DateRangeDto?
+		createdFrom: Date?,
+		createdTo: Date?,
+		updatedFrom: Date?,
+		updatedTo: Date?
 	) {
 		self.ids = ids
 		self.categoryId = categoryId
@@ -48,8 +52,10 @@ public struct AttributeListDto: Codable {
 		self.per = per
 		self.type = type
 		self.unit = unit
-		self.createdRange = createdRange
-		self.updatedRange = updatedRange
+		self.createdFrom = createdFrom
+		self.createdTo = createdTo
+		self.updatedFrom = updatedFrom
+		self.updatedTo = updatedTo
 	}
 }
 

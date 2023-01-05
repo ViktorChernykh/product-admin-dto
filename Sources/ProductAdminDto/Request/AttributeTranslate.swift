@@ -17,8 +17,10 @@ public struct AttributeTranslateListDto: Codable {
 	public let per: Int?
 	public let translatedName: String?
 	public let translatedUnit: String?
-	public let createdRange: DateRangeDto?
-	public let updatedRange: DateRangeDto?
+	public let createdFrom: Date?
+	public let createdTo: Date?
+	public let updatedFrom: Date?
+	public let updatedTo: Date?
 
 	// MARK: - Init
 	public init(
@@ -29,8 +31,10 @@ public struct AttributeTranslateListDto: Codable {
 		per: Int?,
 		translatedName: String?,
 		translatedUnit: String?,
-		createdRange: DateRangeDto?,
-		updatedRange: DateRangeDto?
+		createdFrom: Date?,
+		createdTo: Date?,
+		updatedFrom: Date?,
+		updatedTo: Date?
 	) {
 		self.ids = ids
 		self.attributeIds = attributeIds
@@ -39,8 +43,10 @@ public struct AttributeTranslateListDto: Codable {
 		self.per = per
 		self.translatedName = translatedName
 		self.translatedUnit = translatedUnit
-		self.createdRange = createdRange
-		self.updatedRange = updatedRange
+		self.createdFrom = createdFrom
+		self.createdTo = createdTo
+		self.updatedFrom = updatedFrom
+		self.updatedTo = updatedTo
 	}
 }
 
