@@ -32,15 +32,18 @@ public struct ProductListDto: Codable {
 	public let page: Int?
 	public let per: Int?
 	public let priceRange: DoubleRangeDto?
-	public let quantityRange: DoubleRangeDto?
+	public let quantityMax: Double?
+	public let quantityMin: Double?
 	public let skus: [String]?
 	public let sortBy: [String: String]?	 //["name": "asc"]
 	public let unit: String?
 	public let vendorIds: [UUID]?
 	public let warningLimitRange: DoubleRangeDto?
 	public let weightRange: DoubleRangeDto?
-	public let createdRange: DateRangeDto?
-	public let updatedRange: DateRangeDto?
+	public let createdFrom: Date?
+	public let createdTo: Date?
+	public let updatedFrom: Date?
+	public let updatedTo: Date?
 
 	// MARK: - Init
 	public init(
@@ -66,15 +69,18 @@ public struct ProductListDto: Codable {
 		page: Int?,
 		per: Int?,
 		priceRange: DoubleRangeDto?,
-		quantityRange: DoubleRangeDto?,
+		quantityMax: Double?,
+		quantityMin: Double?,
 		skus: [String]?,
 		sortBy: [String: String]?,	 //["name": "asc"]
 		unit: String?,
 		vendorIds: [UUID]?,
 		warningLimitRange: DoubleRangeDto?,
 		weightRange: DoubleRangeDto?,
-		createdRange: DateRangeDto?,
-		updatedRange: DateRangeDto?
+		createdFrom: Date?,
+		createdTo: Date?,
+		updatedFrom: Date?,
+		updatedTo: Date?
 	) {
 		self.ids = ids
 		self.attributeValueIds = attributeValueIds
@@ -98,15 +104,18 @@ public struct ProductListDto: Codable {
 		self.page = page
 		self.per = per
 		self.priceRange = priceRange
-		self.quantityRange = quantityRange
+		self.quantityMax = quantityMax
+		self.quantityMin = quantityMin
 		self.skus = skus
 		self.sortBy = sortBy	 //["name": "asc"]
 		self.unit = unit
 		self.vendorIds = vendorIds
 		self.warningLimitRange = warningLimitRange
 		self.weightRange = weightRange
-		self.createdRange = createdRange
-		self.updatedRange = updatedRange
+		self.createdFrom = createdFrom
+		self.createdTo = createdTo
+		self.updatedFrom = updatedFrom
+		self.updatedTo = updatedTo
 	}
 }
 

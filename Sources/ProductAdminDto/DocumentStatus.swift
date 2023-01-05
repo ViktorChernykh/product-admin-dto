@@ -9,5 +9,5 @@ public enum DocumentStatus: String, Codable {
 	public static let schema = "document_status"
 	case deleted
 	case held
-	case written
+	case save
 }
