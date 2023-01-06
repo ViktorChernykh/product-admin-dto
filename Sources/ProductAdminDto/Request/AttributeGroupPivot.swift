@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import ProductDto
 
 public struct AttributeGroupPivotListDto: Codable {
 	// MARK: - Stored properties

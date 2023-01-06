@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import ProductDto
 
 public struct VendorListDto: Codable {
 	// MARK: - Stored properties
