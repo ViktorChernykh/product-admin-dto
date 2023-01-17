@@ -1,12 +1,12 @@
-// swift-tools-version: 5.7
+// swift-tools-version:5.1
 
 import PackageDescription
 
 let package = Package(
     name: "product-admin-dto",
     platforms: [
-        .macOS(.v12),
-        .iOS(.v13),
+        .macOS(.v10_15),
+        .iOS(.v10),
     ],
     products: [
         .library(name: "ProductAdminDto", targets: ["ProductAdminDto"]),
