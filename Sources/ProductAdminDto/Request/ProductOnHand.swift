@@ -12,16 +12,19 @@ public struct ProductOnHandChangeDto: Codable {
 	public let optionValueHeaderPivotId: UUID?
 	public let productId: UUID
 	public let quantity: Double
+	public let reserve: Double
 
 	// MARK: - Init
 	public init(
 		optionValueHeaderPivotId: UUID?,
 		productId: UUID,
-		quantity: Double
+		quantity: Double,
+		reserve: Double
 	) {
 		self.optionValueHeaderPivotId = optionValueHeaderPivotId
 		self.productId = productId
 		self.quantity = quantity
+		self.reserve = reserve
 	}
 }
 
