@@ -22,16 +22,16 @@ public struct GroupTranslateListDto: Codable {
 
 	// MARK: - Init
 	public init(
-		ids: [UUID]?,
-		groupIds: [UUID]?,
-		langs: [String]?,
-		page: Int?,
-		per: Int?,
-		translatedName: String?,
-		createdFrom: Date?,
-		createdTo: Date?,
-		updatedFrom: Date?,
-		updatedTo: Date?
+		ids: [UUID]? = nil,
+		groupIds: [UUID]? = nil,
+		langs: [String]? = nil,
+		page: Int? = nil,
+		per: Int? = nil,
+		translatedName: String? = nil,
+		createdFrom: Date? = nil,
+		createdTo: Date? = nil,
+		updatedFrom: Date? = nil,
+		updatedTo: Date? = nil
 	) {
 		self.ids = ids
 		self.groupIds = groupIds

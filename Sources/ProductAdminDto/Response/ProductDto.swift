@@ -54,7 +54,7 @@ public struct ProductDto: Codable {
 	// MARK: - Init
 	public init(
 		id: UUID,
-		externalId: String?,
+		externalId: String? = nil,
 		attributes: [AttributeForProductDto],
 		categories: [CategoryForProductDto],
 		currencyId: String,

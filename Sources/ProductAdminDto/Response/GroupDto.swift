@@ -19,7 +19,7 @@ public struct GroupDto: Codable {
 	// MARK: - Init
 	public init(
 		id: UUID,
-		externalId: String?,
+		externalId: String? = nil,
 		name: String,
 		createdAt: Date,
 		updatedAt: Date?

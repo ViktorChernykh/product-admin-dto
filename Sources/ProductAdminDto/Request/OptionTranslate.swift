@@ -22,16 +22,16 @@ public struct OptionTranslateListDto: Codable {
 
 	// MARK: - Init
 	public init(
-		ids: [UUID]?,
-		langs: [String]?,
-		optionIds: [UUID]?,
-		page: Int?,
-		per: Int?,
-		translatedName: String?,
-		createdFrom: Date?,
-		createdTo: Date?,
-		updatedFrom: Date?,
-		updatedTo: Date?
+		ids: [UUID]? = nil,
+		langs: [String]? = nil,
+		optionIds: [UUID]? = nil,
+		page: Int? = nil,
+		per: Int? = nil,
+		translatedName: String? = nil,
+		createdFrom: Date? = nil,
+		createdTo: Date? = nil,
+		updatedFrom: Date? = nil,
+		updatedTo: Date? = nil
 	) {
 		self.ids = ids
 		self.langs = langs

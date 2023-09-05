@@ -19,7 +19,7 @@ public struct AttributeCategoryPivotDto: Codable {
 	// MARK: - Init
 	public init(
 		id: UUID,
-		externalId: String?,
+		externalId: String? = nil,
 		attributeId: UUID,
 		categoryId: UUID,
 		createdAt: Date,

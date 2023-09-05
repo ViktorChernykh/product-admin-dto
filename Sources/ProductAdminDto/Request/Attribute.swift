@@ -27,20 +27,20 @@ public struct AttributeListDto: Codable {
 
 	// MARK: - Init
 	public init(
-		ids: [UUID]?,
+		ids: [UUID]? = nil,
 		categoryId: UUID,
-		externalIds: [String]?,
-		isFilter: Bool?,
-		lang: String?,
-		name: String?,
-		page: Int?,
-		per: Int?,
-		type: AttributeType?,
-		unit: String?,
-		createdFrom: Date?,
-		createdTo: Date?,
-		updatedFrom: Date?,
-		updatedTo: Date?
+		externalIds: [String]? = nil,
+		isFilter: Bool? = nil,
+		lang: String? = nil,
+		name: String? = nil,
+		page: Int? = nil,
+		per: Int? = nil,
+		type: AttributeType? = nil,
+		unit: String? = nil,
+		createdFrom: Date? = nil,
+		createdTo: Date? = nil,
+		updatedFrom: Date? = nil,
+		updatedTo: Date? = nil
 	) {
 		self.ids = ids
 		self.categoryId = categoryId
@@ -71,7 +71,7 @@ public struct AttributeCreateDto: Codable {
 
 	// MARK: - Init
 	public init(
-		externalId: String?,
+		externalId: String? = nil,
 		isNumber: Bool,
 		isFilter: Bool,
 		name: String,
@@ -103,7 +103,7 @@ public struct AttributeUpdateDto: Codable {
 	// MARK: - Init
 	public init(
 		id: UUID,
-		externalId: String?,
+		externalId: String? = nil,
 		isNumber: Bool,
 		isFilter: Bool,
 		name: String,

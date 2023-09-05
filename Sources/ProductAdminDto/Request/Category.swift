@@ -24,18 +24,18 @@ public struct CategoryListDto: Codable {
 
 	// MARK: - Init
 	public init(
-		ids: [UUID]?,
-		externalIds: [String]?,
-		isVisible: Bool?,
-		lang: String?,
-		name: String?,
-		page: Int?,
-		parentIds: [UUID]?,
-		per: Int?,
-		createdFrom: Date?,
-		createdTo: Date?,
-		updatedFrom: Date?,
-		updatedTo: Date?
+		ids: [UUID]? = nil,
+		externalIds: [String]? = nil,
+		isVisible: Bool? = nil,
+		lang: String? = nil,
+		name: String? = nil,
+		page: Int? = nil,
+		parentIds: [UUID]? = nil,
+		per: Int? = nil,
+		createdFrom: Date? = nil,
+		createdTo: Date? = nil,
+		updatedFrom: Date? = nil,
+		updatedTo: Date? = nil
 	) {
 		self.ids = ids
 		self.externalIds = externalIds
@@ -64,7 +64,7 @@ public struct CategoryCreateDto: Codable {
 
 	// MARK: - Init
 	public init(
-		externalId: String?,
+		externalId: String? = nil,
 		image: String?,
 		isVisible: Bool,
 		name: String,
@@ -96,7 +96,7 @@ public struct CategoryUpdateDto: Codable {
 	// MARK: - Init
 	public init(
 		id: UUID,
-		externalId: String?,
+		externalId: String? = nil,
 		image: String?,
 		isVisible: Bool,
 		name: String,

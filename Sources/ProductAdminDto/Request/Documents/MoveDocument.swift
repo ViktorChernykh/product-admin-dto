@@ -26,7 +26,7 @@ public struct MoveDocumentDto: Codable {
 		author: String,
 		date: Date,
 		documentId: String,
-		externalId: String?,
+		externalId: String? = nil,
 		status: DocumentStatus,
 		fromStockId: UUID,
 		toStockId: UUID,

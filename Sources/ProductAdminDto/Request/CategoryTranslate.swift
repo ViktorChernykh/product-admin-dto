@@ -23,17 +23,17 @@ public struct CategoryTranslateListDto: Codable {
 
 	// MARK: - Init
 	public init(
-		ids: [UUID]?,
-		categoryIds: [UUID]?,
-		langs: [String]?,
-		page: Int?,
-		per: Int?,
-		translatedName: String?,
-		translatedSpecification: String?,
-		createdFrom: Date?,
-		createdTo: Date?,
-		updatedFrom: Date?,
-		updatedTo: Date?
+		ids: [UUID]? = nil,
+		categoryIds: [UUID]? = nil,
+		langs: [String]? = nil,
+		page: Int? = nil,
+		per: Int? = nil,
+		translatedName: String? = nil,
+		translatedSpecification: String? = nil,
+		createdFrom: Date? = nil,
+		createdTo: Date? = nil,
+		updatedFrom: Date? = nil,
+		updatedTo: Date? = nil
 	) {
 		self.ids = ids
 		self.categoryIds = categoryIds

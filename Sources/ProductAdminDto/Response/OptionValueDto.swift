@@ -23,7 +23,7 @@ public struct OptionValueDto: Codable {
 	// MARK: - Init
 	public init(
 		id: UUID,
-		externalId: String?,
+		externalId: String? = nil,
 		image: String?,
 		optionId: UUID,
 		priceModifier: Double,

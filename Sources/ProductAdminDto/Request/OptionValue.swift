@@ -22,16 +22,16 @@ public struct OptionValueListDto: Codable {
 
 	// MARK: - Init
 	public init(
-		ids: [UUID]?,
-		externalIds: [String]?,
-		optionIds: [UUID]?,
-		page: Int?,
-		per: Int?,
-		value: String?,
-		createdFrom: Date?,
-		createdTo: Date?,
-		updatedFrom: Date?,
-		updatedTo: Date?
+		ids: [UUID]? = nil,
+		externalIds: [String]? = nil,
+		optionIds: [UUID]? = nil,
+		page: Int? = nil,
+		per: Int? = nil,
+		value: String? = nil,
+		createdFrom: Date? = nil,
+		createdTo: Date? = nil,
+		updatedFrom: Date? = nil,
+		updatedTo: Date? = nil
 	) {
 		self.ids = ids
 		self.externalIds = externalIds
@@ -57,7 +57,7 @@ public struct OptionValueCreateDto: Codable {
 
 	// MARK: - Init
 	public init(
-		externalId: String?,
+		externalId: String? = nil,
 		image: String?,
 		optionId: UUID,
 		priceModifier: Double?,
@@ -86,7 +86,7 @@ public struct OptionValueUpdateDto: Codable {
 	// MARK: - Init
 	public init(
 		id: UUID,
-		externalId: String?,
+		externalId: String? = nil,
 		image: String?,
 		optionId: UUID,
 		priceModifier: Double?,

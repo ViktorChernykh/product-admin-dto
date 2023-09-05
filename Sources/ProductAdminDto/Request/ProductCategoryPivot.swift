@@ -22,16 +22,16 @@ public struct ProductCategoryPivotListDto: Codable {
 
 	// MARK: - Init
 	public init(
-		ids: [UUID]?,
-		externalIds: [String]?,
-		categoryIds: [UUID]?,
-		page: Int?,
-		per: Int?,
-		productIds: [UUID]?,
-		createdFrom: Date?,
-		createdTo: Date?,
-		updatedFrom: Date?,
-		updatedTo: Date?
+		ids: [UUID]? = nil,
+		externalIds: [String]? = nil,
+		categoryIds: [UUID]? = nil,
+		page: Int? = nil,
+		per: Int? = nil,
+		productIds: [UUID]? = nil,
+		createdFrom: Date? = nil,
+		createdTo: Date? = nil,
+		updatedFrom: Date? = nil,
+		updatedTo: Date? = nil
 	) {
 		self.ids = ids
 		self.externalIds = externalIds
@@ -54,7 +54,7 @@ public struct ProductCategoryPivotCreateDto: Codable {
 
 	// MARK: - Init
 	public init(
-		externalId: String?,
+		externalId: String? = nil,
 		categoryId: UUID,
 		productId: UUID
 	) {
@@ -74,7 +74,7 @@ public struct ProductCategoryPivotUpdateDto: Codable {
 	// MARK: - Init
 	public init(
 		id: UUID,
-		externalId: String?,
+		externalId: String? = nil,
 		categoryId: UUID,
 		productId: UUID
 	) {

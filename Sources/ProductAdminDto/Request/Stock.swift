@@ -17,11 +17,11 @@ public struct StockListDto: Codable {
 
 	// MARK: - Init
 	public init(
-		ids: [UUID]?,
-		externalIds: [String]?,
-		isVisible: Bool?,
-		negativeBalanceAllowed: Bool?,
-		name: String?
+		ids: [UUID]? = nil,
+		externalIds: [String]? = nil,
+		isVisible: Bool? = nil,
+		negativeBalanceAllowed: Bool? = nil,
+		name: String? = nil
 	) {
 		self.ids = ids
 		self.externalIds = externalIds
@@ -41,7 +41,7 @@ public struct StockCreateDto: Codable {
 
 	// MARK: - Init
 	public init(
-		externalId: String?,
+		externalId: String? = nil,
 		isVisible: Bool,
 		negativeBalanceAllowed: Bool,
 		description: String?,
@@ -67,7 +67,7 @@ public struct StockUpdateDto: Codable {
 	// MARK: - Init
 	public init(
 		id: UUID,
-		externalId: String?,
+		externalId: String? = nil,
 		isVisible: Bool,
 		negativeBalanceAllowed: Bool,
 		description: String?,

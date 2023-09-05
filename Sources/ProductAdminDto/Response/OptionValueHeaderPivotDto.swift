@@ -20,7 +20,7 @@ public struct OptionValueHeaderPivotDto: Codable {
 	// MARK: - Init
 	public init(
 		id: UUID,
-		externalId: String?,
+		externalId: String? = nil,
 		optionId: UUID,
 		optionValueId: UUID,
 		productId: UUID,

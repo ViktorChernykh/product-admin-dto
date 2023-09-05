@@ -1,19 +1,18 @@
 //
-//  ProductAttributeValuePivotDto.swift
+//  AttributeValueDto.swift
 //  ProductAdminDto
 //
-//  Created by Victor Chernykh on 29.11.2022.
+//  Created by Victor Chernykh on 10.05.2022.
 //
 
 import Foundation
 
-public struct ProductAttributeValuePivotDto: Codable {
+public struct AttributeValueDto: Codable {
 	// MARK: - Stored properties
 	public let id: UUID
 	public let externalId: String?
 	public let attributeId: UUID
-	public let attributeValueId: UUID
-	public let productId: UUID
+	public let value: String
 	public let createdAt: Date
 	public let updatedAt: Date?
 
@@ -22,16 +21,14 @@ public struct ProductAttributeValuePivotDto: Codable {
 		id: UUID,
 		externalId: String? = nil,
 		attributeId: UUID,
-		attributeValueId: UUID,
-		productId: UUID,
+		value: String,
 		createdAt: Date,
 		updatedAt: Date?
 	) {
 		self.id = id
 		self.externalId = externalId
 		self.attributeId = attributeId
-		self.attributeValueId = attributeValueId
-		self.productId = productId
+		self.value = value
 		self.createdAt = createdAt
 		self.updatedAt = updatedAt
 	}

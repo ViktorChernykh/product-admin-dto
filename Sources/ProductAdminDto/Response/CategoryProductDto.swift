@@ -19,7 +19,7 @@ public struct CategoryProductDto: Codable {
 	// MARK: - Init
 	public init(
 		id: UUID,
-		externalId: String?,
+		externalId: String? = nil,
 		categoryId: UUID,
 		productId: UUID,
 		createdAt: Date,

@@ -17,11 +17,11 @@ public struct DesireListDto: Codable {
 
 	// MARK: - Init
 	public init(
-		lang: String?,
-		page: Int?,
-		per: Int?,
-		createdFrom: Date?,
-		createdTo: Date?
+		lang: String? = nil,
+		page: Int? = nil,
+		per: Int? = nil,
+		createdFrom: Date? = nil,
+		createdTo: Date? = nil
 	) {
 		self.lang = lang
 		self.page = page

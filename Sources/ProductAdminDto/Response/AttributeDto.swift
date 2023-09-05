@@ -1,20 +1,22 @@
 //
-//  OptionDto.swift
+//  AttributeDto.swift
 //  ProductAdminDto
 //
-//  Created by Victor Chernykh on 27.11.2022.
+//  Created by Victor Chernykh on 26.11.2022.
 //
 
 import Foundation
-import ProductDto
 
-public struct OptionDto: Codable {
+public struct AttributeDto: Codable {
 	// MARK: - Stored properties
 	public let id: UUID
 	public let externalId: String?
+	public let isNumber: Bool
+	public let isFilter: Bool
 	public let name: String
-	public let isRequired: Bool
-	public let optionType: OptionType
+	public let order: Int?
+	public let type: AttributeType
+	public let unit: String?
 	public let createdAt: Date
 	public let updatedAt: Date?
 
@@ -22,17 +24,23 @@ public struct OptionDto: Codable {
 	public init(
 		id: UUID,
 		externalId: String? = nil,
+		isNumber: Bool,
+		isFilter: Bool,
 		name: String,
-		isRequired: Bool,
-		optionType: OptionType,
+		order: Int?,
+		type: AttributeType,
+		unit: String?,
 		createdAt: Date,
 		updatedAt: Date?
 	) {
 		self.id = id
 		self.externalId = externalId
+		self.isNumber = isNumber
+		self.isFilter = isFilter
 		self.name = name
-		self.isRequired = isRequired
-		self.optionType = optionType
+		self.order = order
+		self.type = type
+		self.unit = unit
 		self.createdAt = createdAt
 		self.updatedAt = updatedAt
 	}

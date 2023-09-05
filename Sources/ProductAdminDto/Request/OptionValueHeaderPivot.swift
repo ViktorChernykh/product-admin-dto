@@ -23,17 +23,17 @@ public struct OptionValueHeaderPivotListDto: Codable {
 
 	// MARK: - Init
 	public init(
-		ids: [UUID]?,
-		externalIds: [String]?,
-		page: Int?,
-		per: Int?,
-		optionIds: [UUID]?,
-		optionValueIds: [UUID]?,
-		productIds: [UUID]?,
-		createdFrom: Date?,
-		createdTo: Date?,
-		updatedFrom: Date?,
-		updatedTo: Date?
+		ids: [UUID]? = nil,
+		externalIds: [String]? = nil,
+		page: Int? = nil,
+		per: Int? = nil,
+		optionIds: [UUID]? = nil,
+		optionValueIds: [UUID]? = nil,
+		productIds: [UUID]? = nil,
+		createdFrom: Date? = nil,
+		createdTo: Date? = nil,
+		updatedFrom: Date? = nil,
+		updatedTo: Date? = nil
 	) {
 		self.ids = ids
 		self.externalIds = externalIds
@@ -57,7 +57,7 @@ public struct OptionValueHeaderPivotCreateDto: Codable {
 
 	// MARK: - Init
 	public init(
-		externalId: String?,
+		externalId: String? = nil,
 		optionId: UUID,
 		optionValueId: UUID
 	) {
@@ -77,7 +77,7 @@ public struct OptionValueHeaderPivotUpdateDto: Codable {
 	// MARK: - Init
 	public init(
 		id: UUID,
-		externalId: String?,
+		externalId: String? = nil,
 		optionId: UUID,
 		optionValueId: UUID
 	) {
@@ -98,7 +98,7 @@ public struct OptionValueHeaderPivotSaveDto: Codable {
 	// MARK: - Init
 	public init(
 		id: UUID?,
-		externalId: String?,
+		externalId: String? = nil,
 		optionId: UUID,
 		optionValueId: UUID
 	) {
@@ -118,7 +118,7 @@ public struct OptionValueHeaderPivotCreateListDto: Codable {
 
 	// MARK: - Init
 	public init(
-		externalId: String?,
+		externalId: String? = nil,
 		name: String,
 		productId: UUID,
 		items: [OptionValueHeaderPivotCreateDto]
@@ -141,7 +141,7 @@ public struct OptionValueHeaderPivotUpdateListDto: Codable {
 	// MARK: - Init
 	public init(
 		id: UUID,
-		externalId: String?,
+		externalId: String? = nil,
 		name: String,
 		productId: UUID,
 		items: [OptionValueHeaderPivotUpdateDto]
@@ -165,7 +165,7 @@ public struct OptionValueHeaderPivotSaveListDto: Codable {
 	// MARK: - Init
 	public init(
 		id: UUID?,
-		externalId: String?,
+		externalId: String? = nil,
 		name: String,
 		productId: UUID,
 		items: [OptionValueHeaderPivotSaveDto]

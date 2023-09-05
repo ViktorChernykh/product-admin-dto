@@ -22,7 +22,7 @@ public struct ProductAttributeValuePivotListDto: Codable {
 
 	// MARK: - Init
 	public init(
-		externalIds: [String]?,
+		externalIds: [String]? = nil,
 		attributeId: UUID?,
 		attributeValueId: UUID?,
 		page: Int?,
@@ -55,7 +55,7 @@ public struct ProductAttributeValuePivotCreateDto: Codable {
 
 	// MARK: - Init
 	public init(
-		externalId: String?,
+		externalId: String? = nil,
 		attributeId: UUID,
 		attributeValueId: UUID,
 		productId: UUID
@@ -78,7 +78,7 @@ public struct ProductAttributeValuePivotUpdateDto: Codable {
 	// MARK: - Init
 	public init(
 		id: UUID,
-		externalId: String?,
+		externalId: String? = nil,
 		attributeId: UUID,
 		attributeValueId: UUID,
 		productId: UUID

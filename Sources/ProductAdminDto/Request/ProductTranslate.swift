@@ -25,19 +25,19 @@ public struct ProductTranslateListDto: Codable {
 
 	// MARK: - Init
 	public init(
-		ids: [UUID]?,
-		langs: [String]?,
-		page: Int?,
-		per: Int?,
-		productIds: [UUID]?,
-		translatedName: String?,
-		translatedSpecification: String?,
-		translatedSubtitle: String?,
-		translatedUnit: String?,
-		createdFrom: Date?,
-		createdTo: Date?,
-		updatedFrom: Date?,
-		updatedTo: Date?
+		ids: [UUID]? = nil,
+		langs: [String]? = nil,
+		page: Int? = nil,
+		per: Int? = nil,
+		productIds: [UUID]? = nil,
+		translatedName: String? = nil,
+		translatedSpecification: String? = nil,
+		translatedSubtitle: String? = nil,
+		translatedUnit: String? = nil,
+		createdFrom: Date? = nil,
+		createdTo: Date? = nil,
+		updatedFrom: Date? = nil,
+		updatedTo: Date? = nil
 	) {
 		self.ids = ids
 		self.langs = langs

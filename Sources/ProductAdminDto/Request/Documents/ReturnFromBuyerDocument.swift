@@ -35,7 +35,7 @@ public struct ReturnFromBuyerDocumentDto: Codable {
 		author: String,
 		date: Date,
 		documentId: String,
-		externalId: String?,
+		externalId: String? = nil,
 		status: DocumentStatus,
 		currency: String,
 		rate: Double,

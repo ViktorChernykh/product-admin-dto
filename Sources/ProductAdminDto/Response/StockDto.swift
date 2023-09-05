@@ -28,7 +28,7 @@ public struct StockDto: Codable {
 	// MARK: - Init
 	public init(
 		id: UUID,
-		externalId: String?,
+		externalId: String? = nil,
 		description: String?,
 		name: String,
 		createdAt: Date,
