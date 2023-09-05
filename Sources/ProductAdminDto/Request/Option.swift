@@ -13,6 +13,7 @@ public struct OptionListDto: Codable {
 	public let ids: [UUID]?
 	public let externalIds: [String]?
 	public let isRequired: Bool?
+	public let lang: String?
 	public let name: String?
 	public let optionType: OptionType?
 	public let page: Int?
@@ -27,6 +28,7 @@ public struct OptionListDto: Codable {
 		ids: [UUID]? = nil,
 		externalIds: [String]? = nil,
 		isRequired: Bool? = nil,
+		lang: String? = nil,
 		name: String? = nil,
 		optionType: OptionType? = nil,
 		page: Int? = nil,
@@ -39,6 +41,7 @@ public struct OptionListDto: Codable {
 		self.ids = ids
 		self.externalIds = externalIds
 		self.isRequired = isRequired
+		self.lang = lang
 		self.name = name
 		self.optionType = optionType
 		self.page = page
