@@ -11,6 +11,7 @@ public struct OptionValueListDto: Codable {
 	// MARK: - Stored properties
 	public let ids: [UUID]?
 	public let externalIds: [String]?
+	public let lang: String?
 	public let optionIds: [UUID]?
 	public let page: Int?
 	public let per: Int?
@@ -24,6 +25,7 @@ public struct OptionValueListDto: Codable {
 	public init(
 		ids: [UUID]? = nil,
 		externalIds: [String]? = nil,
+		lang: String? = nil,
 		optionIds: [UUID]? = nil,
 		page: Int? = nil,
 		per: Int? = nil,
@@ -35,6 +37,7 @@ public struct OptionValueListDto: Codable {
 	) {
 		self.ids = ids
 		self.externalIds = externalIds
+		self.lang = lang
 		self.optionIds = optionIds
 		self.page = page
 		self.per = per

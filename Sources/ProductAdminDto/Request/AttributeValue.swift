@@ -12,6 +12,7 @@ public struct AttributeValueListDto: Codable {
 	public let ids: [UUID]?
 	public let attributeIds: [UUID]?
 	public let externalIds: [String]?
+	public let lang: String?
 	public let value: String?
 	public let page: Int?
 	public let per: Int?
@@ -25,6 +26,7 @@ public struct AttributeValueListDto: Codable {
 		ids: [UUID]? = nil,
 		attributeIds: [UUID]? = nil,
 		externalIds: [String]? = nil,
+		lang: String? = nil,
 		value: String? = nil,
 		page: Int? = nil,
 		per: Int? = nil,
@@ -36,6 +38,7 @@ public struct AttributeValueListDto: Codable {
 		self.ids = ids
 		self.attributeIds = attributeIds
 		self.externalIds = externalIds
+		self.lang = lang
 		self.value = value
 		self.page = page
 		self.per = per
