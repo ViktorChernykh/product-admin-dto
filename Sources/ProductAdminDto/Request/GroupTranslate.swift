@@ -1,5 +1,5 @@
 //
-//  AttributeGroupTranslate.swift
+//  GroupTranslate.swift
 //  ProductAdminDto
 //
 //  Created by Victor Chernykh on 31.08.2022.
@@ -7,10 +7,10 @@
 
 import Foundation
 
-public struct AttributeGroupTranslateListDto: Codable {
+public struct GroupTranslateListDto: Codable {
 	// MARK: - Stored properties
 	public let ids: [UUID]?
-	public let attributeGroupIds: [UUID]?
+	public let groupIds: [UUID]?
 	public let langs: [String]?
 	public let page: Int?
 	public let per: Int?
@@ -23,7 +23,7 @@ public struct AttributeGroupTranslateListDto: Codable {
 	// MARK: - Init
 	public init(
 		ids: [UUID]?,
-		attributeGroupIds: [UUID]?,
+		groupIds: [UUID]?,
 		langs: [String]?,
 		page: Int?,
 		per: Int?,
@@ -34,7 +34,7 @@ public struct AttributeGroupTranslateListDto: Codable {
 		updatedTo: Date?
 	) {
 		self.ids = ids
-		self.attributeGroupIds = attributeGroupIds
+		self.groupIds = groupIds
 		self.langs = langs
 		self.page = page
 		self.per = per
@@ -46,61 +46,61 @@ public struct AttributeGroupTranslateListDto: Codable {
 	}
 }
 
-public struct AttributeGroupTranslateCreateDto: Codable {
+public struct GroupTranslateCreateDto: Codable {
 	// MARK: - Stored properties
 	public let lang: String
 	public let translatedName: String
-	public let attributeGroupId: UUID
+	public let groupId: UUID
 
 	// MARK: - Init
 	public init(
 		lang: String,
 		translatedName: String,
-		attributeGroupId: UUID
+		groupId: UUID
 	) {
 		self.lang = lang
 		self.translatedName = translatedName
-		self.attributeGroupId = attributeGroupId
+		self.groupId = groupId
 	}
 }
 
-public struct AttributeGroupTranslateUpdateDto: Codable {
+public struct GroupTranslateUpdateDto: Codable {
 	// MARK: - Stored properties
 	public let id: UUID
 	public let lang: String
 	public let translatedName: String
-	public let attributeGroupId: UUID
+	public let groupId: UUID
 
 	// MARK: - Init
 	public init(
 		id: UUID,
 		lang: String,
 		translatedName: String,
-		attributeGroupId: UUID
+		groupId: UUID
 	) {
 		self.id = id
 		self.lang = lang
 		self.translatedName = translatedName
-		self.attributeGroupId = attributeGroupId
+		self.groupId = groupId
 	}
 }
 
-public struct AttributeGroupTranslateCreateListDto: Codable {
+public struct GroupTranslateCreateListDto: Codable {
 	// MARK: - Stored properties
-	public let items: [AttributeGroupTranslateCreateDto]
+	public let items: [GroupTranslateCreateDto]
 
 	// MARK: - Init
-	public init(items: [AttributeGroupTranslateCreateDto]) {
+	public init(items: [GroupTranslateCreateDto]) {
 		self.items = items
 	}
 }
 
-public struct AttributeGroupTranslateUpdateListDto: Codable {
+public struct GroupTranslateUpdateListDto: Codable {
 	// MARK: - Stored properties
-	public let items: [AttributeGroupTranslateUpdateDto]
+	public let items: [GroupTranslateUpdateDto]
 
 	// MARK: - Init
-	public init(items: [AttributeGroupTranslateUpdateDto]) {
+	public init(items: [GroupTranslateUpdateDto]) {
 		self.items = items
 	}
 }

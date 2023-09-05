@@ -1,5 +1,5 @@
 //
-//  AttributeGroupDto.swift
+//  GroupDto.swift
 //  ProductAdminDto
 //
 //  Created by Victor Chernykh on 28.04.2022.
@@ -7,7 +7,8 @@
 
 import Foundation
 
-public struct AttributeGroupDto: Codable {
+///
+public struct GroupDto: Codable {
 	// MARK: - Stored properties
 	public let id: UUID
 	public let externalId: String?

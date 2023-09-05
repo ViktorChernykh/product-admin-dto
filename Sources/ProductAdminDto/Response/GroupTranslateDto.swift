@@ -1,5 +1,5 @@
 //
-//  AttributeGroupTranslateDto.swift
+//  GroupTranslateDto.swift
 //  ProductAdminDto
 //
 //  Created by Victor Chernykh on 10.09.2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct AttributeGroupTranslateDto: Codable {
+public struct GroupTranslateDto: Codable {
 	// MARK: - Stored properties
 	public let id: UUID
 	public let lang: String

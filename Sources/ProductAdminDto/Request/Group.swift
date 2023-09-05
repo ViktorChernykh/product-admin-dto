@@ -1,5 +1,5 @@
 //
-//  AttributeGroup.swift
+//  Group.swift
 //  ProductAdminDto
 //
 //  Created by Victor Chernykh on 28.04.2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct AttributeGroupListDto: Codable {
+public struct GroupListDto: Codable {
 	// MARK: - Stored properties
 	public let ids: [UUID]?
 	public let externalIds: [String]?
@@ -46,7 +46,7 @@ public struct AttributeGroupListDto: Codable {
 	}
 }
 
-public struct AttributeGroupCreateDto: Codable {
+public struct GroupCreateDto: Codable {
 	// MARK: - Stored properties
 	public let externalId: String?
 	public let name: String
@@ -61,7 +61,7 @@ public struct AttributeGroupCreateDto: Codable {
 	}
 }
 
-public struct AttributeGroupUpdateDto: Codable {
+public struct GroupUpdateDto: Codable {
 	// MARK: - Stored properties
 	public let id: UUID
 	public let externalId: String?
@@ -79,22 +79,22 @@ public struct AttributeGroupUpdateDto: Codable {
 	}
 }
 
-public struct AttributeGroupCreateListDto: Codable {
+public struct GroupCreateListDto: Codable {
 	// MARK: - Stored properties
-	public let items: [AttributeGroupCreateDto]
+	public let items: [GroupCreateDto]
 
 	// MARK: - Init
-	public init(items: [AttributeGroupCreateDto]) {
+	public init(items: [GroupCreateDto]) {
 		self.items = items
 	}
 }
 
-public struct AttributeGroupUpdateListDto: Codable {
+public struct GroupUpdateListDto: Codable {
 	// MARK: - Stored properties
-	public let items: [AttributeGroupUpdateDto]
+	public let items: [GroupUpdateDto]
 
 	// MARK: - Init
-	public init(items: [AttributeGroupUpdateDto]) {
+	public init(items: [GroupUpdateDto]) {
 		self.items = items
 	}
 }

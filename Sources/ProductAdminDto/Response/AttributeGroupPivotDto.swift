@@ -20,7 +20,7 @@ public struct AttributeGroupPivotDto: Codable {
 		case id
 		case externalId
 		case attributeId
-		case groupId = "attributeGroupId"
+		case groupId
 		case createdAt
 		case updatedAt
 	}
