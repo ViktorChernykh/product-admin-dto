@@ -9,19 +9,19 @@ import Foundation
 
 public struct ProductOnHandChangeDto: Codable {
 	// MARK: - Stored properties
-	public let optionValueHeaderPivotId: UUID?
+	public let characteristicId: UUID?
 	public let productId: UUID
 	public let quantity: Double
 	public let reserve: Double
 
 	// MARK: - Init
 	public init(
-		optionValueHeaderPivotId: UUID?,
+		characteristicId: UUID?,
 		productId: UUID,
 		quantity: Double,
 		reserve: Double
 	) {
-		self.optionValueHeaderPivotId = optionValueHeaderPivotId
+		self.characteristicId = characteristicId
 		self.productId = productId
 		self.quantity = quantity
 		self.reserve = reserve
