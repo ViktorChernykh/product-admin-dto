@@ -135,7 +135,6 @@ public struct CharacteristicCreateListDto: Codable {
 
 public struct CharacteristicUpdateListDto: Codable {
 	// MARK: - Stored properties
-	public let id: UUID
 	public let externalId: String?
 	public let name: String
 	public let productId: UUID
@@ -143,13 +142,11 @@ public struct CharacteristicUpdateListDto: Codable {
 
 	// MARK: - Init
 	public init(
-		id: UUID,
 		externalId: String? = nil,
 		name: String,
 		productId: UUID,
 		items: [CharacteristicUpdateDto]
 	) {
-		self.id = id
 		self.externalId = externalId
 		self.name = name
 		self.productId = productId
@@ -159,7 +156,6 @@ public struct CharacteristicUpdateListDto: Codable {
 
 public struct CharacteristicSaveListDto: Codable {
 	// MARK: - Stored properties
-	public let id: UUID?
 	public let externalId: String?
 	public let name: String
 	public let productId: UUID
@@ -167,13 +163,11 @@ public struct CharacteristicSaveListDto: Codable {
 
 	// MARK: - Init
 	public init(
-		id: UUID?,
 		externalId: String? = nil,
 		name: String,
 		productId: UUID,
 		items: [CharacteristicSaveDto]
 	) {
-		self.id = id
 		self.externalId = externalId
 		self.name = name
 		self.productId = productId
