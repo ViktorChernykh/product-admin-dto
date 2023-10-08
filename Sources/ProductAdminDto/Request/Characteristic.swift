@@ -1,5 +1,5 @@
 //
-//  OptionValueHeaderPivot.swift
+//  Characteristic.swift
 //  ProductService
 //
 //  Created by Victor Chernykh on 19.12.2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct OptionValueHeaderPivotListDto: Codable {
+public struct CharacteristicListDto: Codable {
 	// MARK: - Stored properties
 	public let ids: [UUID]?
 	public let externalIds: [String]?
@@ -49,7 +49,8 @@ public struct OptionValueHeaderPivotListDto: Codable {
 	}
 }
 
-public struct OptionValueHeaderPivotCreateDto: Codable {
+/// Used only by CharacteristicCreateListDto.
+public struct CharacteristicCreateDto: Codable {
 	// MARK: - Stored properties
 	public let externalId: String?
 	public let optionId: UUID
@@ -67,7 +68,8 @@ public struct OptionValueHeaderPivotCreateDto: Codable {
 	}
 }
 
-public struct OptionValueHeaderPivotUpdateDto: Codable {
+/// Used only by CharacteristicUpdateListDto.
+public struct CharacteristicUpdateDto: Codable {
 	// MARK: - Stored properties
 	public let id: UUID
 	public let externalId: String?
@@ -88,7 +90,8 @@ public struct OptionValueHeaderPivotUpdateDto: Codable {
 	}
 }
 
-public struct OptionValueHeaderPivotSaveDto: Codable {
+/// Used only by CharacteristicSaveListDto.
+public struct CharacteristicSaveDto: Codable {
 	// MARK: - Stored properties
 	public let id: UUID?
 	public let externalId: String?
@@ -109,19 +112,19 @@ public struct OptionValueHeaderPivotSaveDto: Codable {
 	}
 }
 
-public struct OptionValueHeaderPivotCreateListDto: Codable {
+public struct CharacteristicCreateListDto: Codable {
 	// MARK: - Stored properties
 	public let externalId: String?
 	public let name: String
 	public let productId: UUID
-	public let items: [OptionValueHeaderPivotCreateDto]
+	public let items: [CharacteristicCreateDto]
 
 	// MARK: - Init
 	public init(
 		externalId: String? = nil,
 		name: String,
 		productId: UUID,
-		items: [OptionValueHeaderPivotCreateDto]
+		items: [CharacteristicCreateDto]
 	) {
 		self.externalId = externalId
 		self.name = name
@@ -130,13 +133,13 @@ public struct OptionValueHeaderPivotCreateListDto: Codable {
 	}
 }
 
-public struct OptionValueHeaderPivotUpdateListDto: Codable {
+public struct CharacteristicUpdateListDto: Codable {
 	// MARK: - Stored properties
 	public let id: UUID
 	public let externalId: String?
 	public let name: String
 	public let productId: UUID
-	public let items: [OptionValueHeaderPivotUpdateDto]
+	public let items: [CharacteristicUpdateDto]
 
 	// MARK: - Init
 	public init(
@@ -144,7 +147,7 @@ public struct OptionValueHeaderPivotUpdateListDto: Codable {
 		externalId: String? = nil,
 		name: String,
 		productId: UUID,
-		items: [OptionValueHeaderPivotUpdateDto]
+		items: [CharacteristicUpdateDto]
 	) {
 		self.id = id
 		self.externalId = externalId
@@ -154,13 +157,13 @@ public struct OptionValueHeaderPivotUpdateListDto: Codable {
 	}
 }
 
-public struct OptionValueHeaderPivotSaveListDto: Codable {
+public struct CharacteristicSaveListDto: Codable {
 	// MARK: - Stored properties
 	public let id: UUID?
 	public let externalId: String?
 	public let name: String
 	public let productId: UUID
-	public let items: [OptionValueHeaderPivotSaveDto]
+	public let items: [CharacteristicSaveDto]
 
 	// MARK: - Init
 	public init(
@@ -168,7 +171,7 @@ public struct OptionValueHeaderPivotSaveListDto: Codable {
 		externalId: String? = nil,
 		name: String,
 		productId: UUID,
-		items: [OptionValueHeaderPivotSaveDto]
+		items: [CharacteristicSaveDto]
 	) {
 		self.id = id
 		self.externalId = externalId

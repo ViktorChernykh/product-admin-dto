@@ -1,5 +1,5 @@
 //
-//  OptionValueHeaderPivotDto.swift
+//  CharacteristicDto.swift
 //  ProductAdminDto
 //
 //  Created by Victor Chernykh on 29.11.2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct OptionValueHeaderPivotDto: Codable {
+public struct CharacteristicDto: Codable {
 	// MARK: - Stored properties
 	public let id: UUID
 	public let externalId: String?
