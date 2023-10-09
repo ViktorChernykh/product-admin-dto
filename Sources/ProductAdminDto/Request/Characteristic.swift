@@ -53,18 +53,36 @@ public struct CharacteristicListDto: Codable {
 public struct CharacteristicCreateDto: Codable {
 	// MARK: - Stored properties
 	public let externalId: String?
-	public let optionId: UUID
-	public let optionValueId: UUID
+	public let optionId: UUID?
+	public let optionId2: UUID?
+	public let optionId3: UUID?
+	public let optionId4: UUID?
+	public let optionValueId: UUID?
+	public let optionValueId2: UUID?
+	public let optionValueId3: UUID?
+	public let optionValueId4: UUID?
 
 	// MARK: - Init
 	public init(
 		externalId: String? = nil,
-		optionId: UUID,
-		optionValueId: UUID
+		optionId: UUID?,
+		optionId2: UUID? = nil,
+		optionId3: UUID? = nil,
+		optionId4: UUID? = nil,
+		optionValueId: UUID?,
+		optionValueId2: UUID? = nil,
+		optionValueId3: UUID? = nil,
+		optionValueId4: UUID? = nil
 	) {
 		self.externalId = externalId
 		self.optionId = optionId
+		self.optionId2 = optionId2
+		self.optionId3 = optionId3
+		self.optionId4 = optionId4
 		self.optionValueId = optionValueId
+		self.optionValueId2 = optionValueId2
+		self.optionValueId3 = optionValueId3
+		self.optionValueId4 = optionValueId4
 	}
 }
 
@@ -73,20 +91,38 @@ public struct CharacteristicUpdateDto: Codable {
 	// MARK: - Stored properties
 	public let id: UUID
 	public let externalId: String?
-	public let optionId: UUID
-	public let optionValueId: UUID
+	public let optionId: UUID?
+	public let optionId2: UUID?
+	public let optionId3: UUID?
+	public let optionId4: UUID?
+	public let optionValueId: UUID?
+	public let optionValueId2: UUID?
+	public let optionValueId3: UUID?
+	public let optionValueId4: UUID?
 
 	// MARK: - Init
 	public init(
 		id: UUID,
 		externalId: String? = nil,
-		optionId: UUID,
-		optionValueId: UUID
+		optionId: UUID?,
+		optionId2: UUID? = nil,
+		optionId3: UUID? = nil,
+		optionId4: UUID? = nil,
+		optionValueId: UUID?,
+		optionValueId2: UUID? = nil,
+		optionValueId3: UUID? = nil,
+		optionValueId4: UUID? = nil
 	) {
 		self.id = id
 		self.externalId = externalId
 		self.optionId = optionId
+		self.optionId2 = optionId2
+		self.optionId3 = optionId3
+		self.optionId4 = optionId4
 		self.optionValueId = optionValueId
+		self.optionValueId2 = optionValueId2
+		self.optionValueId3 = optionValueId3
+		self.optionValueId4 = optionValueId4
 	}
 }
 
@@ -95,20 +131,38 @@ public struct CharacteristicSaveDto: Codable {
 	// MARK: - Stored properties
 	public let id: UUID?
 	public let externalId: String?
-	public let optionId: UUID
-	public let optionValueId: UUID
+	public let optionId: UUID?
+	public let optionId2: UUID?
+	public let optionId3: UUID?
+	public let optionId4: UUID?
+	public let optionValueId: UUID?
+	public let optionValueId2: UUID?
+	public let optionValueId3: UUID?
+	public let optionValueId4: UUID?
 
 	// MARK: - Init
 	public init(
 		id: UUID?,
 		externalId: String? = nil,
-		optionId: UUID,
-		optionValueId: UUID
+		optionId: UUID?,
+		optionId2: UUID? = nil,
+		optionId3: UUID? = nil,
+		optionId4: UUID? = nil,
+		optionValueId: UUID?,
+		optionValueId2: UUID? = nil,
+		optionValueId3: UUID? = nil,
+		optionValueId4: UUID? = nil
 	) {
 		self.id = id
 		self.externalId = externalId
 		self.optionId = optionId
+		self.optionId2 = optionId2
+		self.optionId3 = optionId3
+		self.optionId4 = optionId4
 		self.optionValueId = optionValueId
+		self.optionValueId2 = optionValueId2
+		self.optionValueId3 = optionValueId3
+		self.optionValueId4 = optionValueId4
 	}
 }
 
