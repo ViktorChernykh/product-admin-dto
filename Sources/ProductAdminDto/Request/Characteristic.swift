@@ -50,84 +50,7 @@ public struct CharacteristicListDto: Codable {
 }
 
 /// Used only by CharacteristicCreateListDto.
-public struct CharacteristicCreateDto: Codable {
-	// MARK: - Stored properties
-	public let externalId: String?
-	public let optionId: UUID?
-	public let optionId2: UUID?
-	public let optionId3: UUID?
-	public let optionId4: UUID?
-	public let optionValueId: UUID?
-	public let optionValueId2: UUID?
-	public let optionValueId3: UUID?
-	public let optionValueId4: UUID?
-
-	// MARK: - Init
-	public init(
-		externalId: String? = nil,
-		optionId: UUID?,
-		optionId2: UUID? = nil,
-		optionId3: UUID? = nil,
-		optionId4: UUID? = nil,
-		optionValueId: UUID?,
-		optionValueId2: UUID? = nil,
-		optionValueId3: UUID? = nil,
-		optionValueId4: UUID? = nil
-	) {
-		self.externalId = externalId
-		self.optionId = optionId
-		self.optionId2 = optionId2
-		self.optionId3 = optionId3
-		self.optionId4 = optionId4
-		self.optionValueId = optionValueId
-		self.optionValueId2 = optionValueId2
-		self.optionValueId3 = optionValueId3
-		self.optionValueId4 = optionValueId4
-	}
-}
-
-/// Used only by CharacteristicUpdateListDto.
-public struct CharacteristicUpdateDto: Codable {
-	// MARK: - Stored properties
-	public let id: UUID
-	public let externalId: String?
-	public let optionId: UUID?
-	public let optionId2: UUID?
-	public let optionId3: UUID?
-	public let optionId4: UUID?
-	public let optionValueId: UUID?
-	public let optionValueId2: UUID?
-	public let optionValueId3: UUID?
-	public let optionValueId4: UUID?
-
-	// MARK: - Init
-	public init(
-		id: UUID,
-		externalId: String? = nil,
-		optionId: UUID?,
-		optionId2: UUID? = nil,
-		optionId3: UUID? = nil,
-		optionId4: UUID? = nil,
-		optionValueId: UUID?,
-		optionValueId2: UUID? = nil,
-		optionValueId3: UUID? = nil,
-		optionValueId4: UUID? = nil
-	) {
-		self.id = id
-		self.externalId = externalId
-		self.optionId = optionId
-		self.optionId2 = optionId2
-		self.optionId3 = optionId3
-		self.optionId4 = optionId4
-		self.optionValueId = optionValueId
-		self.optionValueId2 = optionValueId2
-		self.optionValueId3 = optionValueId3
-		self.optionValueId4 = optionValueId4
-	}
-}
-
-/// Used only by CharacteristicSaveListDto.
-public struct CharacteristicSaveDto: Codable {
+public struct CharacteristicRequestDto: Codable {
 	// MARK: - Stored properties
 	public let id: UUID?
 	public let externalId: String?
@@ -135,23 +58,39 @@ public struct CharacteristicSaveDto: Codable {
 	public let optionId2: UUID?
 	public let optionId3: UUID?
 	public let optionId4: UUID?
+	public let optionName: String?
+	public let optionName2: String?
+	public let optionName3: String?
+	public let optionName4: String?
 	public let optionValueId: UUID?
 	public let optionValueId2: UUID?
 	public let optionValueId3: UUID?
 	public let optionValueId4: UUID?
+	public let optionValueName: String?
+	public let optionValueName2: String?
+	public let optionValueName3: String?
+	public let optionValueName4: String?
 
 	// MARK: - Init
 	public init(
-		id: UUID?,
+		id: UUID? = nil,
 		externalId: String? = nil,
 		optionId: UUID?,
 		optionId2: UUID? = nil,
 		optionId3: UUID? = nil,
 		optionId4: UUID? = nil,
+		optionName: String?,
+		optionName2: String? = nil,
+		optionName3: String? = nil,
+		optionName4: String? = nil,
 		optionValueId: UUID?,
 		optionValueId2: UUID? = nil,
 		optionValueId3: UUID? = nil,
-		optionValueId4: UUID? = nil
+		optionValueId4: UUID? = nil,
+		optionValueName: String?,
+		optionValueName2: String? = nil,
+		optionValueName3: String? = nil,
+		optionValueName4: String? = nil
 	) {
 		self.id = id
 		self.externalId = externalId
@@ -159,68 +98,34 @@ public struct CharacteristicSaveDto: Codable {
 		self.optionId2 = optionId2
 		self.optionId3 = optionId3
 		self.optionId4 = optionId4
+		self.optionName = optionName
+		self.optionName2 = optionName2
+		self.optionName3 = optionName3
+		self.optionName4 = optionName4
 		self.optionValueId = optionValueId
 		self.optionValueId2 = optionValueId2
 		self.optionValueId3 = optionValueId3
 		self.optionValueId4 = optionValueId4
+		self.optionValueName = optionValueName
+		self.optionValueName2 = optionValueName2
+		self.optionValueName3 = optionValueName3
+		self.optionValueName4 = optionValueName4
 	}
 }
 
-public struct CharacteristicCreateListDto: Codable {
+public struct CharacteristicRequestListDto: Codable {
 	// MARK: - Stored properties
 	public let externalId: String?
 	public let name: String
 	public let productId: UUID
-	public let items: [CharacteristicCreateDto]
+	public let items: [CharacteristicRequestDto]
 
 	// MARK: - Init
 	public init(
 		externalId: String? = nil,
 		name: String,
 		productId: UUID,
-		items: [CharacteristicCreateDto]
-	) {
-		self.externalId = externalId
-		self.name = name
-		self.productId = productId
-		self.items = items
-	}
-}
-
-public struct CharacteristicUpdateListDto: Codable {
-	// MARK: - Stored properties
-	public let externalId: String?
-	public let name: String
-	public let productId: UUID
-	public let items: [CharacteristicUpdateDto]
-
-	// MARK: - Init
-	public init(
-		externalId: String? = nil,
-		name: String,
-		productId: UUID,
-		items: [CharacteristicUpdateDto]
-	) {
-		self.externalId = externalId
-		self.name = name
-		self.productId = productId
-		self.items = items
-	}
-}
-
-public struct CharacteristicSaveListDto: Codable {
-	// MARK: - Stored properties
-	public let externalId: String?
-	public let name: String
-	public let productId: UUID
-	public let items: [CharacteristicSaveDto]
-
-	// MARK: - Init
-	public init(
-		externalId: String? = nil,
-		name: String,
-		productId: UUID,
-		items: [CharacteristicSaveDto]
+		items: [CharacteristicRequestDto]
 	) {
 		self.externalId = externalId
 		self.name = name
