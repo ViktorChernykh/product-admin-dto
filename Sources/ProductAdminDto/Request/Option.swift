@@ -59,18 +59,21 @@ public struct OptionCreateDto: Codable {
 	public let name: String
 	public let isRequired: Bool
 	public let optionType: OptionType
+	public let order: Int
 
 	// MARK: - Init
 	public init(
 		externalId: String? = nil,
 		name: String,
 		isRequired: Bool,
-		optionType: OptionType
+		optionType: OptionType,
+		order: Int
 	) {
 		self.externalId = externalId
 		self.name = name
 		self.isRequired = isRequired
 		self.optionType = optionType
+		self.order = order
 	}
 }
 
@@ -81,6 +84,7 @@ public struct OptionUpdateDto: Codable {
 	public let name: String
 	public let isRequired: Bool
 	public let optionType: OptionType
+	public let order: Int
 
 	// MARK: - Init
 	public init(
@@ -88,13 +92,15 @@ public struct OptionUpdateDto: Codable {
 		externalId: String? = nil,
 		name: String,
 		isRequired: Bool,
-		optionType: OptionType
+		optionType: OptionType,
+		order: Int
 	) {
 		self.id = id
 		self.externalId = externalId
 		self.name = name
 		self.isRequired = isRequired
 		self.optionType = optionType
+		self.order = order
 	}
 }
 

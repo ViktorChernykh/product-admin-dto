@@ -15,6 +15,7 @@ public struct OptionDto: Codable {
 	public let name: String
 	public let isRequired: Bool
 	public let optionType: OptionType
+	public let order: Int
 	public let createdAt: Date
 	public let updatedAt: Date?
 
@@ -25,6 +26,7 @@ public struct OptionDto: Codable {
 		name: String,
 		isRequired: Bool,
 		optionType: OptionType,
+		order: Int,
 		createdAt: Date,
 		updatedAt: Date?
 	) {
@@ -33,6 +35,7 @@ public struct OptionDto: Codable {
 		self.name = name
 		self.isRequired = isRequired
 		self.optionType = optionType
+		self.order = order
 		self.createdAt = createdAt
 		self.updatedAt = updatedAt
 	}
