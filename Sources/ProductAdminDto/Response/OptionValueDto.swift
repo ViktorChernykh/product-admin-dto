@@ -14,8 +14,8 @@ public struct OptionValueDto: Codable {
 	public let externalId: String?
 	public let image: String?
 	public let optionId: UUID
-	public let priceModifier: Double
-	public let priceModifierType: PriceModifierType
+	public let priceModifier: Double?
+	public let priceModifierType: PriceModifierType?
 	public let value: String
 	public let createdAt: Date
 	public let updatedAt: Date?
@@ -26,8 +26,8 @@ public struct OptionValueDto: Codable {
 		externalId: String? = nil,
 		image: String?,
 		optionId: UUID,
-		priceModifier: Double,
-		priceModifierType: PriceModifierType,
+		priceModifier: Double?,
+		priceModifierType: PriceModifierType?,
 		value: String,
 		createdAt: Date,
 		updatedAt: Date?
